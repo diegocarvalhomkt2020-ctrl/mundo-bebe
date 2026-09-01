@@ -3,7 +3,7 @@ import Layout from '../../layouts/Layout.astro';
 import ProdutoCard from '../../components/ProdutoCard.astro';
 import dados from '../../data/produtos.json';
 
-const categoria = dados.categorias.find((c) => c.id === 'cadeirinha-carro');
+const categoria = dados.categorias.find((c) => c.id === 'carrinho-bebe');
 const produtos = categoria.produtos;
 
 const breadcrumbSchema = {
@@ -11,22 +11,22 @@ const breadcrumbSchema = {
   "@type": "BreadcrumbList",
   itemListElement: [
     { "@type": "ListItem", position: 1, name: "Início", item: "https://mundobebe.dicasinteligentes.com/" },
-    { "@type": "ListItem", position: 2, name: "Cadeirinha para carro", item: "https://mundobebe.dicasinteligentes.com/cadeirinha-carro/" },
+    { "@type": "ListItem", position: 2, name: "Carrinho de bebê", item: "https://mundobebe.dicasinteligentes.com/carrinho-bebe/" },
   ],
 };
 
 const faq = [
   {
-    pergunta: "Cadeirinha 0-36kg ou trocar de cadeirinha conforme a criança cresce?",
-    resposta: "Depende do que pesa mais pra você. Uma cadeirinha 0-36kg (Cosco Progress) resolve numa compra só, mas é grande e ocupa bastante espaço no banco desde cedo. Trocar em etapas (bebê conforto, depois 9-36kg) custa mais no total, mas cada fase fica mais compacta e ajustada ao tamanho real da criança naquele momento.",
+    pergunta: "Travel system (carrinho + bebê conforto) ou comprar separado?",
+    resposta: "Travel system sai mais barato que comprar os dois separados e garante que as peças encaixam entre si. A desvantagem é menos liberdade pra escolher a cadeirinha ideal: se você já pesquisou e quer uma marca específica de cadeirinha (nossa recomendação de cadeirinha para carro tem mais opções), pode ser melhor comprar o carrinho e a cadeirinha separados.",
   },
   {
-    pergunta: "Vale a pena pagar mais por Isofix?",
-    resposta: "Isofix trava direto na estrutura do carro, sem depender do cinto de segurança pra prender a cadeirinha, o que reduz erro de instalação. Só compensa se o seu carro tiver esse encaixe, verifique no manual do veículo antes de decidir.",
+    pergunta: "Carrinho compacto de viagem serve pro dia a dia também?",
+    resposta: "Serve, mas geralmente troca durabilidade e conforto por tamanho reduzido. Se o uso principal for dia a dia (não viagem), um carrinho mais robusto costuma aguentar melhor o uso constante.",
   },
   {
-    pergunta: "Cadeirinha muito mais cara é sempre mais segura?",
-    resposta: "Não necessariamente. Todo produto vendido no Brasil passa pelas mesmas normas mínimas de segurança do Inmetro. A diferença de preço nas opções mais caras da lista é sobre recurso (giro 360°, facilidade de instalação, acolchoado premium), não sobre o item ser \"mais seguro\" no sentido básico.",
+    pergunta: "Vale a pena um carrinho que promete servir do nascimento até os 22kg?",
+    resposta: "Só se você realmente pretende usar por vários anos. Carrinho que cobre uma faixa etária maior costuma ser mais pesado e caro. Se o plano é usar só os primeiros 1-2 anos, um modelo mais simples resolve com menos investimento.",
   },
 ];
 
@@ -41,28 +41,28 @@ const faqSchema = {
 };
 ---
 <Layout
-  title="Cadeirinha para carro: qual escolher"
-  description="Cadeirinhas para carro pesquisadas na Amazon, com preço, nota e o defeito real de cada uma, incluindo checagem de segurança, pra escolher sem chute."
-  image="/images/produtos/cosco-progress-cadeirinha-0-36kg.png"
+  title="Carrinho de bebê: qual escolher"
+  description="Carrinhos de bebê pesquisados na Amazon, com preço, nota e o defeito real de cada um, incluindo checagem de segurança, pra escolher sem chute."
 >
   <p><a href="/">← Início</a></p>
-  <h1>Cadeirinha para carro: qual escolher</h1>
+  <h1>Carrinho de bebê: qual escolher</h1>
   <p class="atualizado">Todos os produtos abaixo foram pesquisados na Amazon, com preço, nota e avaliações reais. Fotos ainda em produção.</p>
 
   <p>
-    Cadeirinha errada não é só desconforto, é risco de segurança de
-    verdade. Os produtos abaixo estão em ordem de preço: da mais barata
-    até a mais completa, sempre com o defeito real de cada uma, não só a
-    nota 5 estrelas.
+    Carrinho errado vira estorvo rápido: pesado demais pra guardar, roda
+    que trava, ou sem proteção de verdade pro bebê. Nessa lista só entram
+    modelos de marca rastreável, sem reclamação grave de segurança
+    recorrente encontrada na pesquisa.
   </p>
 
   <section class="como-escolhemos">
     <h2>Como escolhemos</h2>
     <p>
-      Nenhuma cadeirinha entra nessa lista sem um defeito real declarado
-      (bloco "Vale saber" em cada card), pesquisado em avaliação de
-      comprador de verdade, nunca inventado. Preço sempre em faixa, nunca
-      fixo.
+      Nenhum carrinho entra nessa lista sem um defeito real declarado
+      (bloco "Vale saber" em cada card). Além da pesquisa de avaliação
+      normal, checamos recall e reclamação de segurança registrada, e
+      descartamos 3 produtos nessa etapa por relato real de falha
+      estrutural ou de travamento. Preço sempre em faixa, nunca fixo.
     </p>
   </section>
 
@@ -97,17 +97,17 @@ const faqSchema = {
   <section class="honestidade">
     <h2>Onde vale gastar mais, onde não faz diferença</h2>
     <p>
-      A diferença de preço entre a mais barata (~R$370) e a mais premium
-      (~R$3.000) não é sobre segurança básica, todas seguem a mesma norma
-      do Inmetro. É sobre recurso: Isofix, giro 360°, capacidade de cobrir
-      do nascimento até 36kg numa cadeira só. Se o seu carro não tem
-      Isofix e você não precisa do giro 360°, uma opção intermediária como
-      a Cosco Progress já resolve bem. Só vale pagar o topo de linha se um
-      desses recursos específicos for importante pra sua rotina.
+      A diferença de preço entre o mais barato (~R$560) e o mais robusto
+      (~R$2.300) é sobre durabilidade e capacidade de acompanhar a criança
+      por mais tempo, não sobre segurança básica. Se você já tem cadeirinha
+      escolhida e só precisa de um carrinho pro dia a dia, o Burigotto Zap
+      resolve bem gastando menos. O travel system (Cosco Reverse Duo) só
+      vale a pena se você ainda não decidiu a cadeirinha e quer o conjunto
+      completo de uma vez.
     </p>
   </section>
 
-  <section id="cadeirinha-carro" class="categoria">
+  <section id="carrinho-bebe" class="categoria">
     <h2>{categoria.nome}</h2>
     <p>{categoria.descricao}</p>
     {produtos.map((produto) => <ProdutoCard produto={produto} />)}
@@ -115,13 +115,13 @@ const faqSchema = {
 
   <p class="cluster-link">
     Veja também:
-    <a href="/cadeirinha-carro/erros-comuns/">os erros mais comuns escolhendo cadeirinha →</a>
+    <a href="/carrinho-bebe/erros-comuns/">os erros mais comuns escolhendo carrinho →</a>
     ·
-    <a href="/cadeirinha-carro/por-orcamento/">as mesmas cadeirinhas por orçamento →</a>
+    <a href="/carrinho-bebe/por-orcamento/">os mesmos carrinhos por orçamento →</a>
     ·
-    <a href="/cadeirinha-carro/comparativo-top3/">comparativo Top 3 lado a lado →</a>
+    <a href="/carrinho-bebe/comparativo-top3/">comparativo Top 3 lado a lado →</a>
     ·
-    <a href="/carrinho-bebe/">já viu nosso comparativo de carrinho de bebê? →</a>
+    <a href="/cadeirinha-carro/">já viu nosso comparativo de cadeirinha para carro? →</a>
   </p>
 
   <section class="faq">

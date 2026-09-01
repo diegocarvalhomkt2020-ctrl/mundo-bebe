@@ -1,5 +1,5 @@
 {
-  "_nota": "Categoria inicial (cadeirinha para carro). 5 produtos reais pesquisados na Amazon, com preço, nota e avaliações reais extraídas da página do produto. Contras vêm das reviews reais de cada anúncio, mais checagem específica de segurança (recall e reclamação no Reclame Aqui) por serem itens de segurança infantil. Um produto (Voyage Legacy) foi pesquisado e descartado da lista por relato real recorrente de cinto que não segura/estrutura instável quando virada pra frente. Fotos ativadas.",
+  "_nota": "Categorias com checagem de segurança extra (recall e reclamação no Reclame Aqui), por serem itens de segurança infantil. Cadeirinha para carro: 1 produto (Voyage Legacy) descartado por relato recorrente de cinto que não segura. Carrinho de bebê: 3 produtos pesquisados e descartados (NIVI Maxi Baby: arco quebrado expondo parafuso e carrinho fechando com bebê dentro; Cosco Toffy: carrinho fechou com bebê de 6 meses sentado mesmo travado; Galzerano Napoli: reclamação grave registrada na mesma linha de produto). Um produto ativo (Maxi-Cosi Pebble, cadeirinha) tem aviso de recall real de 2026 da base FamilyFix Slide Pro declarado no card. Fotos: cadeirinha ativada, carrinho ainda em produção.",
   "categorias": [
     {
       "id": "cadeirinha-carro",
@@ -96,6 +96,86 @@
           "contra": "Atenção: a Maxi-Cosi anunciou em 2026 um recall internacional da base FamilyFix Slide Pro por falha no indicador de encaixe, que pode mostrar verde (preso) mesmo sem a cadeirinha estar totalmente conectada. Antes de usar, confira direto no site da Maxi-Cosi se a base do seu conjunto está na lista do recall, e sempre confirme o encaixe manualmente na frente e atrás, não confie só no indicador visual. Fora isso, também é pesado pra usar como travel system, segundo mais de um comprador, e é de longe o mais caro da lista.",
           "paraQuem": "Pra quem prioriza o giro 360 e a marca de referência, e não se importa em pagar bem mais por isso",
           "linkAmazon": "https://www.amazon.com.br/dp/B0D9KTJ3M7?tag=dicasinteli05-20"
+        }
+      ]
+    },
+    {
+      "id": "carrinho-bebe",
+      "nome": "Carrinho de bebê",
+      "tempoEstimado": "20 a 30 min",
+      "descricao": "Carrinho errado vira estorvo rápido: pesado demais pra guardar, roda que trava, ou sem proteção de verdade pro bebê. Aqui só entram modelos com marca rastreável e sem reclamação grave de segurança recorrente.",
+      "produtos": [
+        {
+          "id": "BB-CARRINHO-01",
+          "nome": "Travel System Cosco Kids Reverse Duo, 0 a 15kg",
+          "imagem": null,
+          "selo": "Mais avaliado",
+          "precoMin": 720,
+          "precoMax": 780,
+          "nota": 4.7,
+          "avaliacoes": 12824,
+          "pros": [
+            "Vem com bebê conforto incluso: conjunto completo numa compra só, compatível com o mesmo sistema da nossa recomendação de cadeirinha",
+            "Reclina tipo berço, bom pros primeiros meses de sono no passeio",
+            "Fácil de montar, leve e compacto pra guardar, segundo a maioria das avaliações"
+          ],
+          "contra": "Reclamações reais e recorrentes apontam pouca proteção lateral na altura da cabeça quando reclinado (acolchoado fino), com relato de bebê batendo a cabeça na lateral. Vale reforçar com um travesseirinho próprio nos primeiros meses. A altura do carrinho também é baixa pra quem é mais alto, segundo vários compradores.",
+          "paraQuem": "Pra quem quer o conjunto completo (carrinho + bebê conforto) numa compra só, e vai reforçar a proteção lateral nos primeiros meses",
+          "linkAmazon": "https://www.amazon.com.br/dp/B0CZSCDB97?tag=dicasinteli05-20"
+        },
+        {
+          "id": "BB-CARRINHO-02",
+          "nome": "Burigotto Carrinho de Bebê Zap Metal",
+          "imagem": null,
+          "selo": "Mais compacto",
+          "precoMin": 560,
+          "precoMax": 620,
+          "nota": 4.8,
+          "avaliacoes": 781,
+          "pros": [
+            "Compacto, fácil de abrir e fechar, cabe bem no porta-malas",
+            "Marca tradicional brasileira, décadas de mercado",
+            "Trava com pedal fácil, aguenta bem o uso diário segundo relatos"
+          ],
+          "contra": "As rodinhas são apontadas como um pouco frágeis em terreno irregular, segundo mais de um comprador: em calçada ruim ou terreno mais bruto, o carrinho pode travar.",
+          "paraQuem": "Pra quem quer algo compacto pro dia a dia e não anda muito fora do asfalto",
+          "linkAmazon": "https://www.amazon.com.br/dp/B0C5NQFRGB?tag=dicasinteli05-20"
+        },
+        {
+          "id": "BB-CARRINHO-03",
+          "nome": "Carrinho de Bebê Maxi-Cosi Eva³",
+          "imagem": null,
+          "selo": "Mais compacto pra viagem",
+          "precoMin": 1850,
+          "precoMax": 1980,
+          "nota": 4.8,
+          "avaliacoes": 263,
+          "pros": [
+            "Compacto o suficiente pra caber no bagageiro de avião, segundo relato real",
+            "Reclina bem pra soneca no passeio",
+            "Garantia de 5 anos ao registrar o produto no site da marca"
+          ],
+          "contra": "Não é ideal pra recém-nascido de verdade: não tem moisés nem bordas de conforto próprias pra bebê pequeno, e pelo menos um comprador relatou dificuldade nos primeiros meses até a criança ficar maior. Funciona melhor a partir de uns 6 meses.",
+          "paraQuem": "Pra quem viaja muito e quer algo compacto, sabendo que rende melhor a partir dos 6 meses",
+          "linkAmazon": "https://www.amazon.com.br/dp/B0DB8VCNJZ?tag=dicasinteli05-20"
+        },
+        {
+          "id": "BB-CARRINHO-04",
+          "nome": "Carrinho de Bebê Maxi-Cosi Leona²",
+          "imagem": null,
+          "selo": "Mais robusto",
+          "precoMin": 2200,
+          "precoMax": 2400,
+          "nota": 4.8,
+          "avaliacoes": 96,
+          "pros": [
+            "Acompanha o crescimento da criança, de 0 até 22kg, segundo relatos",
+            "Assento reversível, vira pros 2 lados",
+            "Acabamento e material elogiados como excelente qualidade"
+          ],
+          "contra": "É pesado, segundo mais de um comprador. Também existe reclamação registrada de rolamento das rodas enferrujando com poucos meses de uso e garantia recusada pela fabricante nesse caso específico. Vale fotografar o produto ao receber e guardar a nota fiscal.",
+          "paraQuem": "Pra quem quer um carrinho que acompanhe a criança por mais tempo, e não se importa com o peso extra",
+          "linkAmazon": "https://www.amazon.com.br/dp/B0D9KVQNQ8?tag=dicasinteli05-20"
         }
       ]
     }

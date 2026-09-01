@@ -1,0 +1,81 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Início", item: "https://mundobebe.dicasinteligentes.com/" },
+    { "@type": "ListItem", position: 2, name: "Carrinho de bebê", item: "https://mundobebe.dicasinteligentes.com/carrinho-bebe/" },
+    { "@type": "ListItem", position: 3, name: "Erros comuns", item: "https://mundobebe.dicasinteligentes.com/carrinho-bebe/erros-comuns/" },
+  ],
+};
+
+const erros = [
+  {
+    titulo: "Comprar marca sem histórico rastreável só porque é mais barato",
+    texto: "Carrinho de marca sem site próprio ou sem página de atendimento é mais difícil de rastrear em caso de defeito ou recall. Prefira marca com histórico, mesmo pagando um pouco mais.",
+  },
+  {
+    titulo: "Não reforçar a proteção lateral nos primeiros meses",
+    texto: "Vários carrinhos populares têm relato real de acolchoado fino na lateral da cabeça quando reclinado. Um travesseirinho próprio de bebê resolve isso, principalmente nos primeiros meses.",
+  },
+  {
+    titulo: "Não testar a trava de fechamento antes de usar de verdade",
+    texto: "Existem relatos reais de carrinho fechando sozinho com a criança sentada, mesmo com a trava aparentemente acionada. Teste a trava algumas vezes, empurrando com força, antes do primeiro uso com o bebê dentro.",
+  },
+  {
+    titulo: "Escolher carrinho de viagem compacto pro uso do dia a dia",
+    texto: "Carrinho pensado pra caber no bagageiro de avião costuma ter menos acolchoado e não é indicado pra recém-nascido. Se o uso principal é o dia a dia, um modelo mais robusto aguenta melhor o uso constante.",
+  },
+  {
+    titulo: "Ignorar sinal de ferrugem ou folga nas rodas",
+    texto: "Existe relato real de rolamento de roda enferrujando com poucos meses de uso, mesmo com pouco uso externo. Confira as rodas periodicamente e fotografe o produto assim que chegar, pra ter registro em caso de garantia.",
+  },
+];
+---
+<Layout
+  title="Erros comuns escolhendo carrinho de bebê"
+  description="Os erros mais comuns na hora de escolher e usar carrinho de bebê, e como evitar cada um."
+>
+  <p><a href="/carrinho-bebe/">← Carrinho de bebê</a></p>
+  <h1>Erros comuns escolhendo carrinho de bebê</h1>
+  <p class="atualizado">Atualizado em setembro de 2026</p>
+
+  <p>
+    A maioria das reclamações sobre carrinho de bebê não é sobre o
+    produto ser ruim, é sobre escolher o modelo errado ou não testar a
+    segurança antes de usar de verdade. Os erros abaixo são os que mais
+    aparecem em avaliação e reclamação real de comprador.
+  </p>
+
+  <section class="erros">
+    {erros.map((erro, i) => (
+      <div class="erro-item">
+        <h2>{i + 1}. {erro.titulo}</h2>
+        <p>{erro.texto}</p>
+      </div>
+    ))}
+  </section>
+
+  <p class="cta-final">
+    Quer ver os produtos reais que pesquisamos?
+    <a href="/carrinho-bebe/">Volte pro guia completo →</a>
+  </p>
+
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+
+  <style>
+    .atualizado { color: var(--cor-texto-suave); font-size: 0.9rem; }
+    .erros { margin: 2rem 0; }
+    .erro-item { margin-bottom: 1.75rem; }
+    .erro-item h2 { font-size: 1.1rem; margin: 0 0 0.4rem; }
+    .erro-item p { margin: 0; color: var(--cor-texto-suave); }
+    .cta-final {
+      margin-top: 2rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--cor-borda);
+      font-weight: 600;
+    }
+  </style>
+</Layout>
