@@ -27,7 +27,14 @@ const imagemAbsoluta = new URL(image || '/images/og-mundo-bebe.png', Astro.site)
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={imagemAbsoluta} />
 
-    <!-- TODO: Google tag (gtag.js): colar o script real quando a propriedade GA4 for criada -->
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SSF5JH3DWN"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-SSF5JH3DWN');
+    </script>
   </head>
   <body>
     <header class="topo">
