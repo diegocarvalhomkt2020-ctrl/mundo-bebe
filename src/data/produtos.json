@@ -1,5 +1,5 @@
 {
-  "_nota": "Categorias com checagem de segurança extra (recall e reclamação no Reclame Aqui), por serem itens de segurança infantil. Cadeirinha para carro: 1 produto (Voyage Legacy) descartado por relato recorrente de cinto que não segura. Carrinho de bebê: 3 produtos pesquisados e descartados (NIVI Maxi Baby: arco quebrado expondo parafuso e carrinho fechando com bebê dentro; Cosco Toffy: carrinho fechou com bebê de 6 meses sentado mesmo travado; Galzerano Napoli: reclamação grave registrada na mesma linha de produto). Um produto ativo (Maxi-Cosi Pebble, cadeirinha) tem aviso de recall real de 2026 da base FamilyFix Slide Pro declarado no card. Fotos: cadeirinha ativada, carrinho ainda em produção.",
+  "_nota": "Categorias com checagem de segurança extra (recall e reclamação no Reclame Aqui), por serem itens de segurança infantil. Cadeirinha para carro: 1 produto (Voyage Legacy) descartado por relato recorrente de cinto que não segura. Carrinho de bebê: 3 produtos pesquisados e descartados (NIVI Maxi Baby: arco quebrado expondo parafuso e carrinho fechando com bebê dentro; Cosco Toffy: carrinho fechou com bebê de 6 meses sentado mesmo travado; Galzerano Napoli: reclamação grave registrada na mesma linha de produto). Um produto ativo (Maxi-Cosi Pebble, cadeirinha) tem aviso de recall real de 2026 da base FamilyFix Slide Pro declarado no card. Fotos: ativadas nas duas categorias (cadeirinha e carrinho).",
   "categorias": [
     {
       "id": "cadeirinha-carro",
@@ -108,7 +108,7 @@
         {
           "id": "BB-CARRINHO-01",
           "nome": "Travel System Cosco Kids Reverse Duo, 0 a 15kg",
-          "imagem": null,
+          "imagem": "/images/produtos/cosco-reverse-duo-travel-system-0-15kg.png",
           "selo": "Mais avaliado",
           "precoMin": 720,
           "precoMax": 780,
@@ -126,7 +126,7 @@
         {
           "id": "BB-CARRINHO-02",
           "nome": "Burigotto Carrinho de Bebê Zap Metal",
-          "imagem": null,
+          "imagem": "/images/produtos/burigotto-zap-metal-carrinho.png",
           "selo": "Mais compacto",
           "precoMin": 560,
           "precoMax": 620,
@@ -144,7 +144,7 @@
         {
           "id": "BB-CARRINHO-03",
           "nome": "Carrinho de Bebê Maxi-Cosi Eva³",
-          "imagem": null,
+          "imagem": "/images/produtos/maxicosi-eva3-carrinho-viagem.png",
           "selo": "Mais compacto pra viagem",
           "precoMin": 1850,
           "precoMax": 1980,
@@ -162,7 +162,7 @@
         {
           "id": "BB-CARRINHO-04",
           "nome": "Carrinho de Bebê Maxi-Cosi Leona²",
-          "imagem": null,
+          "imagem": "/images/produtos/maxicosi-leona2-carrinho-robusto.png",
           "selo": "Mais robusto",
           "precoMin": 2200,
           "precoMax": 2400,
