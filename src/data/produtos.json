@@ -1,0 +1,103 @@
+{
+  "_nota": "Categoria inicial (cadeirinha para carro). 5 produtos reais pesquisados na Amazon, com preço, nota e avaliações reais extraídas da página do produto. Contras vêm das reviews reais de cada anúncio, mais checagem específica de segurança (recall e reclamação no Reclame Aqui) por serem itens de segurança infantil. Um produto (Voyage Legacy) foi pesquisado e descartado da lista por relato real recorrente de cinto que não segura/estrutura instável quando virada pra frente. Fotos ainda em produção.",
+  "categorias": [
+    {
+      "id": "cadeirinha-carro",
+      "nome": "Cadeirinha para carro",
+      "tempoEstimado": "20 a 30 min",
+      "descricao": "Cadeirinha errada não é só desconforto, é risco de segurança de verdade. Preço varia demais entre os modelos, e nem sempre o mais caro resolve melhor pro seu carro e sua rotina.",
+      "produtos": [
+        {
+          "id": "BB-CADEIRINHA-01",
+          "nome": "Cadeirinha Cosco Kids Progress, 0 a 36kg",
+          "imagem": null,
+          "selo": "Mais avaliada",
+          "precoMin": 560,
+          "precoMax": 610,
+          "nota": 4.8,
+          "avaliacoes": 6460,
+          "pros": [
+            "Cobre do nascimento até 36kg numa cadeira só, não precisa trocar 2 ou 3 vezes",
+            "Nota altíssima com quase 6,5 mil avaliações reais",
+            "Acolchoado grosso, elogiado como confortável em quase toda avaliação"
+          ],
+          "contra": "É uma cadeira grande, ocupa bastante espaço no banco de trás, segundo mais de um comprador. Algumas peças de acolchoado (protetor de cabeça, almofada do assento) vêm soltas, sem velcro ou fixação, e podem se deslocar com o uso.",
+          "paraQuem": "Pra quem quer resolver do zero aos 36kg numa cadeira só e tem carro com banco traseiro espaçoso",
+          "linkAmazon": "https://www.amazon.com.br/dp/B08YMXTLX2?tag=dicasinteli05-20"
+        },
+        {
+          "id": "BB-CADEIRINHA-02",
+          "nome": "Cosco Kids Cadeirinha Tour, 9 a 36 Kg",
+          "imagem": null,
+          "selo": "Mais barata",
+          "precoMin": 370,
+          "precoMax": 395,
+          "nota": 4.6,
+          "avaliacoes": 4813,
+          "pros": [
+            "Preço bem mais baixo que a maioria da lista",
+            "Nota alta com quase 4,8 mil avaliações reais",
+            "Boa opção pra criança que já passou da fase de bebê conforto, a partir de 9kg"
+          ],
+          "contra": "Não reclina: é o tipo de cadeira que não ajuda a criança a dormir confortável no banco, segundo review detalhada de quem já comparou com outros modelos. O manual de instalação também é apontado como pouco intuitivo por mais de um comprador.",
+          "paraQuem": "Pra criança a partir de 9kg (já não é recém-nascida) e famílias que priorizam preço",
+          "linkAmazon": "https://www.amazon.com.br/dp/B07FNZKM49?tag=dicasinteli05-20"
+        },
+        {
+          "id": "BB-CADEIRINHA-03",
+          "nome": "Cadeira para Auto Litet All Stages Fix 2.0, Isofix, 0-36Kg",
+          "imagem": null,
+          "selo": "Com Isofix",
+          "precoMin": 800,
+          "precoMax": 870,
+          "nota": 4.8,
+          "avaliacoes": 2018,
+          "pros": [
+            "Encaixe Isofix disponível, mais seguro e rápido de instalar do que só cinto, segundo quem já testou os dois",
+            "Reclina bem, elogiado por quem trocou de um modelo anterior que não reclinava",
+            "Nota 4,8 com mais de 2 mil avaliações"
+          ],
+          "contra": "Os ajustes não são muito práticos e a instalação é apontada como difícil por parte dos compradores, mesmo entre quem deu nota máxima ao produto.",
+          "paraQuem": "Pra quem tem carro com Isofix e quer aproveitar esse recurso de segurança",
+          "linkAmazon": "https://www.amazon.com.br/dp/B0BXMV4ZXW?tag=dicasinteli05-20"
+        },
+        {
+          "id": "BB-CADEIRINHA-04",
+          "nome": "Cosco Kids Cadeirinha Evolutty 360 X, com Giro 360º e Isofix",
+          "imagem": null,
+          "selo": "Giro 360 acessível",
+          "precoMin": 850,
+          "precoMax": 900,
+          "nota": 4.6,
+          "avaliacoes": 1279,
+          "pros": [
+            "Giro 360° por um preço bem menor que os concorrentes premium importados",
+            "Fixação só por Isofix na posição giratória, fica bem presa segundo relatos",
+            "3 níveis de inclinação, boa avaliação de conforto pra soneca no trajeto"
+          ],
+          "contra": "Faz barulho durante o trajeto, principalmente na posição giratória, pela folga necessária da base rotativa. A fabricante confirmou em resposta pública que é característica normal do sistema de giro e reclino, não peça quebrada ou solta, mas o barulho já gerou mais de uma reclamação de comprador achando que era defeito.",
+          "paraQuem": "Pra quem quer giro 360 sem pagar o preço de marca premium importada, e não se incomoda com um pouco de barulho no trajeto",
+          "linkAmazon": "https://www.amazon.com.br/dp/B0B9CLH2W2?tag=dicasinteli05-20"
+        },
+        {
+          "id": "BB-CADEIRINHA-05",
+          "nome": "Bebê Conforto Maxi-Cosi Pebble, com Base Familyfix, Giro 360° Isofix",
+          "imagem": null,
+          "selo": "Mais premium",
+          "precoMin": 2900,
+          "precoMax": 3150,
+          "nota": 4.7,
+          "avaliacoes": 48,
+          "pros": [
+            "Giro 360° facilita muito colocar e tirar o bebê do carro sem torcer o corpo",
+            "Encaixa bem no bebê pequeno, cabeça fica firme sem balançar, segundo avaliação real",
+            "Marca internacional de referência em segurança infantil"
+          ],
+          "contra": "É pesado, principalmente na hora de encaixar no carrinho de passeio pra usar como travel system, segundo mais de um comprador. E é de longe o mais caro da lista, custando bem mais que qualquer outra opção pesquisada.",
+          "paraQuem": "Pra quem prioriza o giro 360 e a marca de referência, e não se importa em pagar bem mais por isso",
+          "linkAmazon": "https://www.amazon.com.br/dp/B0D9KTJ3M7?tag=dicasinteli05-20"
+        }
+      ]
+    }
+  ]
+}

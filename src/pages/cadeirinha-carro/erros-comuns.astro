@@ -1,0 +1,81 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Início", item: "https://mundobebe.dicasinteligentes.com/" },
+    { "@type": "ListItem", position: 2, name: "Cadeirinha para carro", item: "https://mundobebe.dicasinteligentes.com/cadeirinha-carro/" },
+    { "@type": "ListItem", position: 3, name: "Erros comuns", item: "https://mundobebe.dicasinteligentes.com/cadeirinha-carro/erros-comuns/" },
+  ],
+};
+
+const erros = [
+  {
+    titulo: "Comprar sem checar se o carro tem Isofix",
+    texto: "Cadeirinha com Isofix só trava direto se o seu carro tiver esse encaixe na estrutura do banco. Confira o manual do veículo antes de pagar mais por esse recurso: em carro sem Isofix, ele fica sem uso, e o cinto de segurança normal resolve igual.",
+  },
+  {
+    titulo: "Não testar a instalação antes de sair de casa com o bebê",
+    texto: "Mais de uma cadeirinha popular tem relato real de instalação difícil ou manual pouco intuitivo. Instala e testa puxando com força pra ver se balança antes do primeiro passeio, nunca na primeira vez com o bebê já no colo esperando.",
+  },
+  {
+    titulo: "Escolher só pelo preço mais baixo sem pensar na fase da criança",
+    texto: "Cadeirinha muito barata pra recém-nascido pode não ter o encaixe ergonômico certo pra essa fase. Confira a faixa de peso/idade do produto, não só o preço.",
+  },
+  {
+    titulo: "Ignorar se a cadeirinha reclina",
+    texto: "Cadeirinha que não reclina (comum nos modelos a partir de 9kg) deixa a cabeça da criança caindo pra frente quando ela dorme no banco. Se o trajeto for longo com frequência, vale procurar um modelo com boa inclinação.",
+  },
+  {
+    titulo: "Não conferir se as peças de acolchoado vêm fixas",
+    texto: "Em pelo menos um modelo popular, protetor de cabeça e almofada do assento vêm soltos, sem velcro. Confira ao montar, e considere reforçar a fixação se perceber que as peças deslocam fácil.",
+  },
+];
+---
+<Layout
+  title="Erros comuns escolhendo cadeirinha"
+  description="Os erros mais comuns na hora de escolher e instalar cadeirinha para carro, do Isofix mal usado à instalação nunca testada antes, e como evitar cada um."
+>
+  <p><a href="/cadeirinha-carro/">← Cadeirinha para carro</a></p>
+  <h1>Erros comuns escolhendo cadeirinha</h1>
+  <p class="atualizado">Atualizado em setembro de 2026</p>
+
+  <p>
+    A maioria das reclamações sobre cadeirinha de carro não é sobre o
+    produto ser ruim, é sobre escolher o modelo errado pro seu carro ou
+    instalar sem checar direito. Os erros abaixo são os que mais aparecem
+    em avaliação real de comprador.
+  </p>
+
+  <section class="erros">
+    {erros.map((erro, i) => (
+      <div class="erro-item">
+        <h2>{i + 1}. {erro.titulo}</h2>
+        <p>{erro.texto}</p>
+      </div>
+    ))}
+  </section>
+
+  <p class="cta-final">
+    Quer ver os produtos reais que pesquisamos?
+    <a href="/cadeirinha-carro/">Volte pro guia completo →</a>
+  </p>
+
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+
+  <style>
+    .atualizado { color: var(--cor-texto-suave); font-size: 0.9rem; }
+    .erros { margin: 2rem 0; }
+    .erro-item { margin-bottom: 1.75rem; }
+    .erro-item h2 { font-size: 1.1rem; margin: 0 0 0.4rem; }
+    .erro-item p { margin: 0; color: var(--cor-texto-suave); }
+    .cta-final {
+      margin-top: 2rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--cor-borda);
+      font-weight: 600;
+    }
+  </style>
+</Layout>
