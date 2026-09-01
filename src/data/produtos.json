@@ -1,5 +1,5 @@
 {
-  "_nota": "Categoria inicial (cadeirinha para carro). 5 produtos reais pesquisados na Amazon, com preço, nota e avaliações reais extraídas da página do produto. Contras vêm das reviews reais de cada anúncio, mais checagem específica de segurança (recall e reclamação no Reclame Aqui) por serem itens de segurança infantil. Um produto (Voyage Legacy) foi pesquisado e descartado da lista por relato real recorrente de cinto que não segura/estrutura instável quando virada pra frente. Fotos ainda em produção.",
+  "_nota": "Categoria inicial (cadeirinha para carro). 5 produtos reais pesquisados na Amazon, com preço, nota e avaliações reais extraídas da página do produto. Contras vêm das reviews reais de cada anúncio, mais checagem específica de segurança (recall e reclamação no Reclame Aqui) por serem itens de segurança infantil. Um produto (Voyage Legacy) foi pesquisado e descartado da lista por relato real recorrente de cinto que não segura/estrutura instável quando virada pra frente. Fotos ativadas.",
   "categorias": [
     {
       "id": "cadeirinha-carro",
@@ -10,7 +10,7 @@
         {
           "id": "BB-CADEIRINHA-01",
           "nome": "Cadeirinha Cosco Kids Progress, 0 a 36kg",
-          "imagem": null,
+          "imagem": "/images/produtos/cosco-progress-cadeirinha-0-36kg.png",
           "selo": "Mais avaliada",
           "precoMin": 560,
           "precoMax": 610,
@@ -28,7 +28,7 @@
         {
           "id": "BB-CADEIRINHA-02",
           "nome": "Cosco Kids Cadeirinha Tour, 9 a 36 Kg",
-          "imagem": null,
+          "imagem": "/images/produtos/cosco-tour-cadeirinha-9-36kg.png",
           "selo": "Mais barata",
           "precoMin": 370,
           "precoMax": 395,
@@ -46,7 +46,7 @@
         {
           "id": "BB-CADEIRINHA-03",
           "nome": "Cadeira para Auto Litet All Stages Fix 2.0, Isofix, 0-36Kg",
-          "imagem": null,
+          "imagem": "/images/produtos/litet-all-stages-fix-isofix.png",
           "selo": "Com Isofix",
           "precoMin": 800,
           "precoMax": 870,
@@ -64,7 +64,7 @@
         {
           "id": "BB-CADEIRINHA-04",
           "nome": "Cosco Kids Cadeirinha Evolutty 360 X, com Giro 360º e Isofix",
-          "imagem": null,
+          "imagem": "/images/produtos/cosco-evolutty-360x-giro-isofix.png",
           "selo": "Giro 360 acessível",
           "precoMin": 850,
           "precoMax": 900,
@@ -82,7 +82,7 @@
         {
           "id": "BB-CADEIRINHA-05",
           "nome": "Bebê Conforto Maxi-Cosi Pebble, com Base Familyfix, Giro 360° Isofix",
-          "imagem": null,
+          "imagem": "/images/produtos/maxicosi-pebble-bebe-conforto-premium.png",
           "selo": "Mais premium",
           "precoMin": 2900,
           "precoMax": 3150,
