@@ -1,0 +1,59 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const site = "https://mundobebe.dicasinteligentes.com";
+
+const websiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: "Mundo Bebê",
+  url: `${site}/`,
+  inLanguage: "pt-BR",
+  description: "Comparativos honestos de produtos pra bebê, com preço, nota e o defeito real de cada um.",
+};
+
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "Mundo Bebê",
+  url: `${site}/`,
+  description: "Site de comparativos de produtos pra bebê, da rede Dicas Inteligentes.",
+};
+---
+<Layout
+  title="Escolha o produto certo pro seu bebê, sem chute"
+  description="Comparativos honestos de produtos pra bebê — carrinho, cadeirinha, berço e mais — com preço, nota e o defeito real de cada um, pesquisado direto nas avaliações de quem já comprou."
+>
+  <script type="application/ld+json" set:html={JSON.stringify(websiteSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(organizationSchema)} />
+
+  <h1>Escolha o produto certo pro seu bebê, sem chute.</h1>
+  <p>
+    Produto de bebê é decisão que mexe com segurança, não só com gosto.
+    Aqui, todo comparativo mostra o defeito real de cada produto — nunca só
+    a nota 5 estrelas — pesquisado direto nas avaliações de quem já comprou.
+  </p>
+
+  <section class="como-funciona">
+    <h2>Como funciona</h2>
+    <p>
+      Cada categoria tem uma lista completa (o guia principal) e conteúdos
+      menores que recortam essa lista de formas diferentes: por erro comum,
+      por orçamento, comparativo direto. Todo defeito citado vem de
+      avaliação real de comprador, nunca inventado. Primeiro comparativo
+      chegando em breve.
+    </p>
+  </section>
+
+  <style>
+    .como-funciona {
+      margin: 2rem 0;
+      padding: 1rem 1.25rem;
+      background: var(--cor-superficie);
+      border: 1px solid var(--cor-borda);
+      border-radius: 10px;
+    }
+    .como-funciona h2 { font-size: 1rem; margin: 0 0 0.4rem; }
+    .como-funciona p { margin: 0; font-size: 0.9rem; color: var(--cor-texto-suave); }
+  </style>
+</Layout>
