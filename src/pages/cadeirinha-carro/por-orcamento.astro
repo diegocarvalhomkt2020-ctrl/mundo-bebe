@@ -30,6 +30,20 @@ const breadcrumbSchema = {
   <h1>Cadeirinha para carro por orçamento</h1>
   <p>Os mesmos produtos do guia principal, separados por faixa de preço.</p>
 
+  <section class="raciocinio">
+    <h2>O que muda de verdade entre as faixas</h2>
+    <p>
+      Sair da cadeira mais barata pra faixa de R$500 a R$1.000 traz dois
+      recursos que fazem diferença real no dia a dia: Isofix (instalação
+      sem depender do cinto de segurança do carro) e reclínio (ajuda o
+      bebê a dormir confortável em trajeto longo). Já pular pra faixa
+      acima de R$1.000 não compra mais segurança, compra portabilidade
+      como travel system, e nesse caso específico exige atenção redobrada:
+      é a faixa onde está o modelo com recall ativo da base FamilyFix
+      Slide Pro, então vale conferir isso antes de decidir só pelo preço.
+    </p>
+  </section>
+
   {faixas.map((faixa) => {
     const produtosFaixa = produtos.filter((p) => p.precoMin >= faixa.min && p.precoMin < faixa.max);
     return produtosFaixa.length > 0 && (
