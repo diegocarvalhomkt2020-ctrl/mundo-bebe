@@ -30,6 +30,23 @@ const breadcrumbSchema = {
   <h1>Carrinho de bebê por orçamento</h1>
   <p>Os mesmos produtos do guia principal, separados por faixa de preço.</p>
 
+  <section class="raciocinio">
+    <h2>O que muda de verdade entre as faixas</h2>
+    <p>
+      Nessa categoria, subir de faixa não significa necessariamente um
+      carrinho melhor pro recém-nascido, significa um uso diferente. Os dois
+      modelos até R$1.000 já são travel systems reclináveis, prontos pra
+      recém-nascido desde o início, mas cada um com uma ressalva própria:
+      reforçar o acolchoado na altura da cabeça no Reverse Duo, e evitar
+      calçada muito irregular no Zap Metal. Já na faixa de R$1.000 a R$2.000
+      está o Eva³, pensado pra compactar em viagem, mas que só funciona bem
+      a partir de uns 6 meses, não é o mais indicado pro bebê recém-nascido.
+      Acima de R$2.000 o Leona² é o mais robusto, porém mais pesado no
+      dia a dia e com relato registrado de ferrugem no rolamento das rodas,
+      então vale fotografar o produto ao receber e guardar a nota fiscal.
+    </p>
+  </section>
+
   {faixas.map((faixa) => {
     const produtosFaixa = produtos.filter((p) => p.precoMin >= faixa.min && p.precoMin < faixa.max);
     return produtosFaixa.length > 0 && (
