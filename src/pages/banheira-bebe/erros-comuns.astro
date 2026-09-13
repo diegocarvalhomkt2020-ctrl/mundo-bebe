@@ -1,0 +1,81 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Início", item: "https://mundobebe.dicasinteligentes.com/" },
+    { "@type": "ListItem", position: 2, name: "Banheira para bebê", item: "https://mundobebe.dicasinteligentes.com/banheira-bebe/" },
+    { "@type": "ListItem", position: 3, name: "Erros comuns", item: "https://mundobebe.dicasinteligentes.com/banheira-bebe/erros-comuns/" },
+  ],
+};
+
+const erros = [
+  {
+    titulo: "Ignorar a capacidade máxima do suporte, não só da banheira",
+    texto: "Em alguns modelos, o suporte tem limite de peso menor que a banheira sozinha (ex: banheira aguenta mais, mas o conjunto com suporte tem um teto declarado). Confira os dois números antes de comprar.",
+  },
+  {
+    titulo: "Não testar a estabilidade do suporte antes do primeiro banho",
+    texto: "Apoie a banheira vazia no suporte e balance com cuidado antes de usar com o bebê dentro — principalmente em piso irregular ou box pequeno. É o tipo de reclamação mais grave que aparece no Reclame Aqui de banheira com suporte: a estrutura solta ou o encaixe abre com o uso, então vale reconferir o encaixe de vez em quando, não só no primeiro uso.",
+  },
+  {
+    titulo: "Comprar banheira dobrável achando que substitui uma rígida no uso pesado",
+    texto: "Banheira de silicone dobrável é ótima pra espaço pequeno ou viagem, mas tem menos rigidez estrutural. Se o plano é usar todo dia por muitos meses, uma rígida tende a aguentar melhor o desgaste.",
+  },
+  {
+    titulo: "Não secar e guardar direito, favorecendo mofo",
+    texto: "Banheira guardada úmida (principalmente as dobráveis, com mais dobras e cantos) acumula mofo rápido. Seque bem antes de guardar, e prefira um lugar ventilado.",
+  },
+  {
+    titulo: "Escolher só pela cor/design e esquecer de medir onde vai apoiar",
+    texto: "Banheira com suporte fixo ocupa espaço permanente. Meça o banheiro antes de comprar um modelo com suporte, principalmente em banheiro pequeno.",
+  },
+];
+---
+<Layout
+  title="Erros comuns escolhendo banheira de bebê"
+  description="Os erros mais comuns na hora de escolher e usar banheira de bebê, e como evitar cada um."
+>
+  <p><a href="/banheira-bebe/">← Banheira para bebê</a></p>
+  <h1>Erros comuns escolhendo banheira de bebê</h1>
+  <p class="atualizado">Atualizado em setembro de 2026</p>
+
+  <p>
+    A maioria dos problemas com banheira de bebê não é sobre o produto
+    ser ruim, é sobre escolher o modelo errado pro espaço ou não conferir
+    o limite de peso certo. Os erros abaixo são os que mais aparecem em
+    avaliação e reclamação real de comprador.
+  </p>
+
+  <section class="erros">
+    {erros.map((erro, i) => (
+      <div class="erro-item">
+        <h2>{i + 1}. {erro.titulo}</h2>
+        <p>{erro.texto}</p>
+      </div>
+    ))}
+  </section>
+
+  <p class="cta-final">
+    Quer ver os produtos reais que pesquisamos?
+    <a href="/banheira-bebe/">Volte pro guia completo →</a>
+  </p>
+
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+
+  <style>
+    .atualizado { color: var(--cor-texto-suave); font-size: 0.9rem; }
+    .erros { margin: 2rem 0; }
+    .erro-item { margin-bottom: 1.75rem; }
+    .erro-item h2 { font-size: 1.1rem; margin: 0 0 0.4rem; }
+    .erro-item p { margin: 0; color: var(--cor-texto-suave); }
+    .cta-final {
+      margin-top: 2rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--cor-borda);
+      font-weight: 600;
+    }
+  </style>
+</Layout>

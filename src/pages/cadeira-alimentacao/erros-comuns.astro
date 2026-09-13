@@ -1,0 +1,85 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Início", item: "https://mundobebe.dicasinteligentes.com/" },
+    { "@type": "ListItem", position: 2, name: "Cadeira de alimentação", item: "https://mundobebe.dicasinteligentes.com/cadeira-alimentacao/" },
+    { "@type": "ListItem", position: 3, name: "Erros comuns", item: "https://mundobebe.dicasinteligentes.com/cadeira-alimentacao/erros-comuns/" },
+  ],
+};
+
+const erros = [
+  {
+    titulo: "Comprar cadeira fixa achando que serve desde o nascimento",
+    texto: "Cadeira de alimentação sem recline só é indicada depois que o bebê senta sozinho, geralmente por volta dos 6 meses. Pra usar antes disso, o modelo precisa reclinar de verdade.",
+  },
+  {
+    titulo: "Não testar a trava da bandeja antes do primeiro uso",
+    texto: "Bandeja mal encaixada pode soltar com o peso da criança se apoiando. Teste a trava algumas vezes, com força, antes de usar de verdade.",
+  },
+  {
+    titulo: "Ignorar o limite de peso declarado",
+    texto: "Cada modelo tem um limite (em geral entre 15 e 20kg). Depois que a criança passa desse peso, a estrutura não é mais garantida pelo fabricante, mesmo que pareça aguentar.",
+  },
+  {
+    titulo: "Não usar o cinto de 5 pontos completo, só o de cintura",
+    texto: "Criança se movimenta bastante durante a refeição — usar só a parte de cintura do cinto aumenta o risco de escorregar por baixo da bandeja. Use sempre o cinto completo.",
+  },
+  {
+    titulo: "Comprar sem conferir o selo do Inmetro na embalagem",
+    texto: "Cadeira de alimentação infantil tem certificação obrigatória no Brasil desde a Portaria Inmetro 168/2021, com teste de laboratório pra estrutura, cinto e bandeja. O selo ausente é sinal de produto fora da regra, principalmente em marca pouco conhecida ou importada direto sem revenda formal.",
+  },
+  {
+    titulo: "Escolher só pelo preço sem pensar em como vai limpar",
+    texto: "Modelo com estofado de tecido absorve mais sujeira de comida que os de plástico/couro sintético liso. Se a praticidade de limpeza importa mais que o preço, vale considerar isso antes de comprar.",
+  },
+];
+---
+<Layout
+  title="Erros comuns escolhendo cadeira de alimentação"
+  description="Os erros mais comuns na hora de escolher e usar cadeira de alimentação para bebê, e como evitar cada um."
+>
+  <p><a href="/cadeira-alimentacao/">← Cadeira de alimentação</a></p>
+  <h1>Erros comuns escolhendo cadeira de alimentação</h1>
+  <p class="atualizado">Atualizado em setembro de 2026</p>
+
+  <p>
+    A maioria dos problemas com cadeira de alimentação não é sobre o
+    produto ser ruim, é sobre escolher o modelo errado pra idade da
+    criança ou não conferir os limites declarados. Os erros abaixo são
+    os que mais aparecem em avaliação e reclamação real de comprador.
+  </p>
+
+  <section class="erros">
+    {erros.map((erro, i) => (
+      <div class="erro-item">
+        <h2>{i + 1}. {erro.titulo}</h2>
+        <p>{erro.texto}</p>
+      </div>
+    ))}
+  </section>
+
+  <p class="cta-final">
+    Quer ver os produtos reais que pesquisamos?
+    <a href="/cadeira-alimentacao/">Volte pro guia completo →</a>
+  </p>
+
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+
+  <style>
+    .atualizado { color: var(--cor-texto-suave); font-size: 0.9rem; }
+    .erros { margin: 2rem 0; }
+    .erro-item { margin-bottom: 1.75rem; }
+    .erro-item h2 { font-size: 1.1rem; margin: 0 0 0.4rem; }
+    .erro-item p { margin: 0; color: var(--cor-texto-suave); }
+    .cta-final {
+      margin-top: 2rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--cor-borda);
+      font-weight: 600;
+    }
+  </style>
+</Layout>

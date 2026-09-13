@@ -1,0 +1,75 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import ProdutoCard from '../../components/ProdutoCard.astro';
+import dados from '../../data/produtos.json';
+
+const categoria = dados.categorias.find((c) => c.id === 'cadeira-alimentacao');
+const produtos = [...categoria.produtos].sort((a, b) => a.precoMin - b.precoMin);
+
+const faixas = [
+  { titulo: "Até R$200", min: 0, max: 200 },
+  { titulo: "R$200 a R$450", min: 200, max: 450 },
+  { titulo: "Acima de R$450", min: 450, max: Infinity },
+];
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Início", item: "https://mundobebe.dicasinteligentes.com/" },
+    { "@type": "ListItem", position: 2, name: "Cadeira de alimentação", item: "https://mundobebe.dicasinteligentes.com/cadeira-alimentacao/" },
+    { "@type": "ListItem", position: 3, name: "Por orçamento", item: "https://mundobebe.dicasinteligentes.com/cadeira-alimentacao/por-orcamento/" },
+  ],
+};
+---
+<Layout
+  title="Cadeira de alimentação por orçamento"
+  description="As mesmas cadeiras de alimentação pesquisadas na Amazon, separadas por faixa de preço, do mais barato ao mais completo."
+>
+  <p><a href="/cadeira-alimentacao/">← Cadeira de alimentação</a></p>
+  <h1>Cadeira de alimentação por orçamento</h1>
+  <p>Os mesmos produtos do guia principal, separados por faixa de preço.</p>
+
+  <section class="raciocinio">
+    <h2>O que muda de verdade entre as faixas</h2>
+    <p>
+      Até R$200 as duas opções da Cosco Kids são bem parecidas entre si,
+      a diferença entre Smart e Pop é mais sobre design e leve variação de
+      conforto do que estrutura. Na faixa de R$200 a R$450 a Poke é a mais
+      avaliada, mas tem duas limitações que valem checar antes: não é
+      reclinável e a capacidade vai só até 15kg, então não serve pra bebê
+      que ainda não senta sozinho. Acima de R$450 a Prima Pappa custa quase
+      3 vezes a mais barata da lista, e só compensa se o plano é usar desde
+      os primeiros meses (com recline) até os 3 anos, sem trocar de
+      cadeira no meio do caminho.
+    </p>
+  </section>
+
+  {faixas.map((faixa) => {
+    const produtosFaixa = produtos.filter((p) => p.precoMin >= faixa.min && p.precoMin < faixa.max);
+    return produtosFaixa.length > 0 && (
+      <section class="faixa">
+        <h2>{faixa.titulo}</h2>
+        {produtosFaixa.map((produto) => <ProdutoCard produto={produto} />)}
+      </section>
+    );
+  })}
+
+  <p class="cta-final">
+    Quer ver o comparativo completo?
+    <a href="/cadeira-alimentacao/">Volte pro guia completo →</a>
+  </p>
+
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+
+  <style>
+    .faixa { margin: 2rem 0; }
+    .faixa h2 { font-size: 1.1rem; margin: 0 0 1rem; color: var(--cor-acento); }
+    .cta-final {
+      margin-top: 2rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--cor-borda);
+      font-weight: 600;
+    }
+  </style>
+</Layout>

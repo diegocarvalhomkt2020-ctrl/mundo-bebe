@@ -178,6 +178,380 @@
           "linkAmazon": "https://www.amazon.com.br/dp/B0D9KVQNQ8?tag=dicasinteli05-20"
         }
       ]
+    },
+    {
+      "id": "berco-bebe",
+      "nome": "Berço/Moisés para bebê",
+      "tempoEstimado": "15 a 20 min",
+      "descricao": "Berço errado sobra em pouco tempo (peso máximo baixo) ou nunca se encaixa no quarto (grande demais). Aqui só entram modelos com aprovação Inmetro declarada ou marca rastreável, sem relato recorrente de falha estrutural na pesquisa.",
+      "produtos": [
+        {
+          "id": "BB-BERCO-01",
+          "nome": "Safety 1st, Berço Mini Play, Grey Denim",
+          "imagem": "/images/produtos/safety1st-berco-mini-play-grey-denim.png",
+          "selo": "Mais avaliado",
+          "precoMin": 413,
+          "precoMax": 649,
+          "nota": 4.8,
+          "avaliacoes": 2636,
+          "pros": [
+            "Aprovado pelo Inmetro conforme a norma ABNT NBR 15.860, do nascimento até 15kg",
+            "2 alturas de colchonete pra acompanhar as fases do bebê, com fixação por zíper",
+            "Leve, dobrável, com rodas e freio — fácil de mover e guardar, vem com bolsa de transporte"
+          ],
+          "contra": "Avaliação de cliente relatada na própria página do produto aponta que o colchonete que acompanha é fino demais pro conforto ideal — vale considerar trocar por um mais grosso do tamanho certo (98x60cm) separadamente.",
+          "paraQuem": "Pra quem quer o modelo mais avaliado da categoria e não se importa de complementar o colchonete",
+          "linkAmazon": "https://www.amazon.com.br/dp/B081T9WZHG?tag=dicasinteli05-20"
+        },
+        {
+          "id": "BB-BERCO-02",
+          "nome": "Burigotto Berço Serenata, Cinza",
+          "imagem": "/images/produtos/burigotto-berco-serenata-cinza.png",
+          "selo": "Marca tradicional",
+          "precoMin": 416,
+          "precoMax": 438,
+          "nota": 4.8,
+          "avaliacoes": 1439,
+          "pros": [
+            "Marca brasileira com décadas de mercado em produtos de bebê",
+            "Nota alta com grande volume de avaliações (mais de 1.400)",
+            "Preço competitivo pra um berço de estrutura fixa (não portátil)"
+          ],
+          "contra": "É um berço de estrutura fixa e maior (101,5 x 66 x 115cm) — meça o espaço do quarto antes de comprar, não é pra quem precisa de algo portátil ou compacto.",
+          "paraQuem": "Pra quem já tem o quarto do bebê definido e quer um berço fixo de marca consolidada",
+          "linkAmazon": "https://www.amazon.com.br/dp/B0C5N3RP6Q?tag=dicasinteli05-20"
+        },
+        {
+          "id": "BB-BERCO-03",
+          "nome": "Berço Moisés Portátil Com Balanço Comfy 9kg, MaxiBaby",
+          "imagem": "/images/produtos/maxibaby-comfy-moises-portatil-9kg.png",
+          "selo": "Mais barato",
+          "precoMin": 320,
+          "precoMax": 649,
+          "nota": 4.8,
+          "avaliacoes": 132,
+          "pros": [
+            "O mais barato da lista, com nota alta apesar do volume menor de avaliações",
+            "Função de balanço, ajuda a acalmar o bebê sem precisar pegar no colo toda hora",
+            "Leve e fácil de mover entre cômodos"
+          ],
+          "contra": "Capacidade de só até 9kg — serve bem pros primeiros meses, mas o bebê enjoa/ultrapassa o limite rápido comparado aos berços de 15-20kg desta lista.",
+          "paraQuem": "Pra quem quer gastar pouco sabendo que vai trocar de berço ainda no primeiro ano",
+          "linkAmazon": "https://www.amazon.com.br/dp/B09VH4SJHT?tag=dicasinteli05-20"
+        },
+        {
+          "id": "BB-BERCO-04",
+          "nome": "Berço Moisés Co-bed Cinza Com Mosquiteiro, KaBaby",
+          "imagem": "/images/produtos/kababy-moises-cobed-cinza-mosquiteiro.png",
+          "selo": "Co-sleeping",
+          "precoMin": 398,
+          "precoMax": 489,
+          "nota": 4.3,
+          "avaliacoes": 95,
+          "pros": [
+            "Acopla na cama dos pais (co-sleeping), facilita amamentação noturna sem levantar",
+            "Vem com mosquiteiro incluso",
+            "Preço abaixo da média da lista"
+          ],
+          "contra": "Nota mais baixa da lista (4,3, ainda positiva) — vale ler as avaliações mais recentes antes de decidir, já que co-sleeping exige encaixe perfeito na cama pra ser seguro.",
+          "paraQuem": "Pra quem quer o bebê por perto à noite sem dividir a cama de verdade",
+          "linkAmazon": "https://www.amazon.com.br/dp/B0FXXSZZNB?tag=dicasinteli05-20"
+        },
+        {
+          "id": "BB-BERCO-05",
+          "nome": "Berço Portátil Safety 1st, Falcon, 0 a 20kg, Black Night",
+          "imagem": "/images/produtos/safety1st-falcon-berco-portatil-0-20kg.png",
+          "selo": "Maior capacidade",
+          "precoMin": 710,
+          "precoMax": 1099,
+          "nota": 4.7,
+          "avaliacoes": 97,
+          "pros": [
+            "Capacidade até 20kg — acompanha o bebê por mais tempo que os moisés desta lista (que vão até 9-15kg)",
+            "Marca com histórico de aprovação Inmetro em outros modelos da linha",
+            "Portátil, com bolsa de transporte"
+          ],
+          "contra": "É o mais caro da lista, quase o dobro do berço mais barato — só compensa se o plano é usar por mais tempo (não trocar de berço no meio do caminho).",
+          "paraQuem": "Pra quem quer investir uma vez só e usar o berço por mais tempo, sem trocar de modelo",
+          "linkAmazon": "https://www.amazon.com.br/dp/B0FFTLCTZD?tag=dicasinteli05-20"
+        }
+      ]
+    },
+    {
+      "id": "banheira-bebe",
+      "nome": "Banheira para bebê",
+      "tempoEstimado": "15 a 20 min",
+      "descricao": "Banheira errada vira dor nas costas (baixa demais, sem suporte) ou risco de escorregão. Aqui só entram modelos de marca com histórico de mercado, com o limite de peso/capacidade declarado.",
+      "produtos": [
+        {
+          "id": "BB-BANHEIRA-01",
+          "nome": "Burigotto Banheira Millenia, Mescla Silver",
+          "imagem": "/images/produtos/burigotto-banheira-millenia-mescla-silver.png",
+          "selo": "Mais avaliada",
+          "precoMin": 409,
+          "precoMax": 559,
+          "nota": 4.9,
+          "avaliacoes": 5800,
+          "pros": [
+            "Marca com 98% de avaliação positiva em mais de 50 mil vendas",
+            "Vem com tampo trocador acolchoado e assento redutor pra recém-nascido",
+            "Porta-objetos removível com suporte pra toalha"
+          ],
+          "contra": "Capacidade máxima declarada do suporte é 20kg no total (criança de até 10kg + 10 litros de água) — depois que o bebê passa dos 10kg, o conjunto banheira+suporte já não é indicado, mesmo o bebê ainda cabendo fisicamente na banheira. Há também relatos pontuais de enferrujamento nas rodinhas do suporte após alguns meses de uso.",
+          "paraQuem": "Pra quem quer o modelo mais avaliado da categoria e vai trocar de solução de banho por volta dos 10kg",
+          "linkAmazon": "https://www.amazon.com.br/dp/B0964DYPXW?tag=dicasinteli05-20"
+        },
+        {
+          "id": "BB-BANHEIRA-02",
+          "nome": "Safety 1st, Banheira Smile com Suporte, Aqua Green",
+          "imagem": "/images/produtos/safety1st-banheira-smile-suporte-aqua-green.png",
+          "selo": "Com suporte de pé",
+          "precoMin": 453,
+          "precoMax": 799,
+          "nota": 4.8,
+          "avaliacoes": 1200,
+          "pros": [
+            "Suporte de pé fixo na altura certa, evita curvar a coluna pra dar banho",
+            "Marca com histórico consolidado em segurança infantil",
+            "Nota alta com bom volume de avaliações"
+          ],
+          "contra": "O suporte é fixo, não dobra — ocupa espaço permanente no banheiro, diferente dos modelos dobráveis ou sem suporte desta lista. Há múltiplos relatos no Reclame Aqui de enferrujamento do próprio suporte metálico em 2 a 4 meses de uso, mesmo com uso doméstico normal — vale secar bem a estrutura depois do banho.",
+          "paraQuem": "Pra quem tem espaço reservado no banheiro e quer evitar dor nas costas no dia a dia do banho",
+          "linkAmazon": "https://www.amazon.com.br/dp/B09WFZ66SL?tag=dicasinteli05-20"
+        },
+        {
+          "id": "BB-BANHEIRA-03",
+          "nome": "Burigotto Banheira Splash+ Baby Blue",
+          "imagem": "/images/produtos/burigotto-banheira-splash-baby-blue.png",
+          "selo": "Mais completa",
+          "precoMin": 479,
+          "precoMax": 639,
+          "nota": 4.9,
+          "avaliacoes": 583,
+          "pros": [
+            "Mesma marca tradicional da Millenia, com nota igualmente alta",
+            "Design mais recente na linha Burigotto",
+            "Boa avaliação apesar do volume menor de reviews"
+          ],
+          "contra": "Tem bem menos avaliações que a Millenia (583 contra quase 6 mil) — a nota é igual de boa, mas o histórico acumulado é bem menor. Também há reclamações pontuais de mangueira de escoamento que não encaixa bem.",
+          "paraQuem": "Pra quem quer um modelo mais recente da mesma marca de confiança",
+          "linkAmazon": "https://www.amazon.com.br/dp/B0CGBT58RB?tag=dicasinteli05-20"
+        },
+        {
+          "id": "BB-BANHEIRA-04",
+          "nome": "Banheira Para Bebê Dobrável Portátil 2 em 1, Pipdip",
+          "imagem": "/images/produtos/pipdip-banheira-dobravel-portatil-2em1.png",
+          "selo": "Mais barata",
+          "precoMin": 142,
+          "precoMax": 249,
+          "nota": 4.8,
+          "avaliacoes": 259,
+          "pros": [
+            "A mais barata da lista, dobra pra guardar (bom pra casa pequena ou viagem)",
+            "Vem com assento, funciona em 2 fases (recém-nascido e bebê que já senta)",
+            "Nota alta apesar de ser um modelo mais recente no mercado"
+          ],
+          "contra": "Por ser dobrável em silicone, tem menos rigidez estrutural que uma banheira rígida — e o volume de avaliações (259) ainda é bem menor que o das marcas tradicionais desta lista.",
+          "paraQuem": "Pra quem tem pouco espaço pra guardar ou quer levar em viagem",
+          "linkAmazon": "https://www.amazon.com.br/dp/B0DQF8B2PB?tag=dicasinteli05-20"
+        }
+      ]
+    },
+    {
+      "id": "baba-eletronica",
+      "nome": "Babá eletrônica",
+      "tempoEstimado": "15 a 20 min",
+      "descricao": "Babá eletrônica errada é sinal que cai, imagem que trava ou bateria que não dura a noite toda. Aqui comparamos modelo dedicado (tela própria) e modelo Wi-Fi (pelo celular), cada um com o trade-off declarado.",
+      "produtos": [
+        {
+          "id": "BB-BABAELETRONICA-01",
+          "nome": "Monitor de Bebê com Câmera, Tela 3,2\" e Visão Noturna (genérico)",
+          "imagem": "/images/produtos/monitor-bebe-camera-tela-3-2-visao-noturna.png",
+          "selo": "Mais avaliado",
+          "precoMin": 318,
+          "precoMax": 378,
+          "nota": 4.4,
+          "avaliacoes": 16600,
+          "pros": [
+            "Disparado o mais avaliado da categoria (mais de 16 mil avaliações)",
+            "Câmera com panorâmica e zoom remoto, visão noturna e áudio bidirecional",
+            "Não depende de Wi-Fi — funciona mesmo se a internet de casa cair"
+          ],
+          "contra": "É produto de marca sem loja física ou suporte pós-venda formal no Brasil, mesmo com o volume grande de avaliações — em caso de defeito, o caminho de garantia é só pelo canal da Amazon.",
+          "paraQuem": "Pra quem quer o mais testado pelo mercado e não quer depender de Wi-Fi",
+          "linkAmazon": "https://www.amazon.com.br/dp/B07N428WP1?tag=dicasinteli05-20"
+        },
+        {
+          "id": "BB-BABAELETRONICA-02",
+          "nome": "Motorola, Babá Eletrônica VM482, Visão Noturna, Tela 2.4",
+          "imagem": "/images/produtos/motorola-baba-eletronica-vm482.png",
+          "selo": "Marca conhecida",
+          "precoMin": 467,
+          "precoMax": 699,
+          "nota": 3.2,
+          "avaliacoes": 67,
+          "pros": [
+            "Marca internacional reconhecida, com histórico em eletrônicos",
+            "Zoom digital e visão noturna",
+            "Suporte de marca mais consolidado que os concorrentes genéricos"
+          ],
+          "contra": "É a nota mais baixa desta lista (3,2 de 5) apesar do nome conhecido — vale ler as avaliações recentes com atenção antes de decidir, mesmo confiando na marca.",
+          "paraQuem": "Pra quem prioriza ter uma marca reconhecida por trás, mesmo com a nota mais baixa da lista",
+          "linkAmazon": "https://www.amazon.com.br/dp/B0BSC8B2ZP?tag=dicasinteli05-20"
+        },
+        {
+          "id": "BB-BABAELETRONICA-03",
+          "nome": "Babá Eletrônica Câmera com Tela 3.2\", Visão Noturna 10m (mais vendida)",
+          "imagem": "/images/produtos/baba-eletronica-mais-vendida-tela-3-2.png",
+          "selo": "Mais barata",
+          "precoMin": 213,
+          "precoMax": 249,
+          "nota": 4.4,
+          "avaliacoes": 263,
+          "pros": [
+            "Selo \"Mais vendido\" da Amazon na categoria",
+            "Preço mais baixo entre os modelos com tela dedicada",
+            "Detecção de som (VOX), monitoramento de temperatura e canções de ninar"
+          ],
+          "contra": "Sem opção de Wi-Fi/celular — só funciona com a tela dedicada que acompanha o produto, então não dá pra checar o bebê de fora de casa.",
+          "paraQuem": "Pra quem quer gastar menos e vai usar só dentro de casa",
+          "linkAmazon": "https://www.amazon.com.br/dp/B0FDQWFL5X?tag=dicasinteli05-20"
+        },
+        {
+          "id": "BB-BABAELETRONICA-04",
+          "nome": "Babá Eletrônica OLANENEM, Tela IPS 7\", HD 1080p, Sem Wi-Fi",
+          "imagem": "/images/produtos/olanenem-baba-eletronica-tela-7-1080p.png",
+          "selo": "Tela grande",
+          "precoMin": 396,
+          "precoMax": 439,
+          "nota": 4.4,
+          "avaliacoes": 206,
+          "pros": [
+            "Tela de 7 polegadas, bem maior que a média da categoria (a maioria é 3.2\")",
+            "Bateria de 5000mAh, boa autonomia",
+            "Sem Wi-Fi por design: mais privado, ninguém consegue acessar a câmera remotamente"
+          ],
+          "contra": "Por não ter Wi-Fi, também não dá pra checar o bebê pelo celular fora de casa — é uma troca deliberada de privacidade por conveniência remota.",
+          "paraQuem": "Pra quem quer tela grande e prioriza privacidade (câmera não acessível pela internet)",
+          "linkAmazon": "https://www.amazon.com.br/dp/B0FX9ZVWCC?tag=dicasinteli05-20"
+        },
+        {
+          "id": "BB-BABAELETRONICA-05",
+          "nome": "Câmera Smart Segurança Wi-Fi Giratória Full HD (monitoramento pelo celular)",
+          "imagem": "/images/produtos/camera-smart-wifi-giratoria-full-hd.png",
+          "selo": "Com app no celular",
+          "precoMin": 60,
+          "precoMax": 70,
+          "nota": 4.5,
+          "avaliacoes": 25,
+          "pros": [
+            "A mais barata da lista, de longe",
+            "Monitoramento pelo celular de qualquer lugar via Wi-Fi, não só dentro de casa",
+            "Detecção de movimento e áudio bidirecional"
+          ],
+          "contra": "Poucas avaliações ainda (25) comparado aos outros modelos, e depende 100% da internet de casa — se a conexão cair, perde o monitoramento (diferente dos modelos sem Wi-Fi desta lista).",
+          "paraQuem": "Pra quem quer acompanhar o bebê pelo celular mesmo fora de casa e não se importa com o histórico menor de avaliações",
+          "linkAmazon": "https://www.amazon.com.br/dp/B0H73LD5XR?tag=dicasinteli05-20"
+        }
+      ]
+    },
+    {
+      "id": "cadeira-alimentacao",
+      "nome": "Cadeira de alimentação",
+      "tempoEstimado": "15 a 20 min",
+      "descricao": "Cadeira de alimentação errada é bandeja que não trava direito, cinto de segurança fraco ou peso limite baixo demais pra criança crescer junto. Aqui só entram modelos de marca rastreável, com capacidade e faixa etária declaradas.",
+      "produtos": [
+        {
+          "id": "BB-CADEIRAALIM-01",
+          "nome": "Burigotto Cadeira De Refeição Poke, Preto Night Sky",
+          "imagem": "/images/produtos/burigotto-cadeira-refeicao-poke-preto.png",
+          "selo": "Mais avaliada",
+          "precoMin": 249,
+          "precoMax": 367,
+          "nota": 4.8,
+          "avaliacoes": 10300,
+          "pros": [
+            "De longe a mais avaliada da categoria (mais de 10 mil avaliações)",
+            "Marca com 98% de avaliação positiva em mais de 50 mil vendas",
+            "Cinto de segurança de 5 pontos, bandeja e sobrebandeja removível"
+          ],
+          "contra": "Capacidade declarada é até 15kg (6 a 36 meses) — menor que a Prima Pappa desta lista, e não é modelo reclinável, então não serve pra bebê que ainda não senta sozinho.",
+          "paraQuem": "Pra quem já tem bebê que senta sozinho e quer o modelo mais testado do mercado",
+          "linkAmazon": "https://www.amazon.com.br/dp/B09LRDGH1Q?tag=dicasinteli05-20"
+        },
+        {
+          "id": "BB-CADEIRAALIM-02",
+          "nome": "Cosco Kids, Cadeira de Refeição Portátil Smart, Gelo",
+          "imagem": "/images/produtos/cosco-kids-cadeira-refeicao-portatil-smart-gelo.png",
+          "selo": "Mais barata",
+          "precoMin": 118,
+          "precoMax": 179,
+          "nota": 4.7,
+          "avaliacoes": 12500,
+          "pros": [
+            "A mais barata da lista, com o maior volume de avaliações de todas (12,5 mil)",
+            "Portátil e dobrável, fácil de guardar ou levar",
+            "Nota alta apesar do preço baixo"
+          ],
+          "contra": "Por ser o modelo mais simples e portátil, tem menos recursos que os modelos de estrutura fixa (sem bandeja dupla removível como a Poke, por exemplo).",
+          "paraQuem": "Pra quem quer gastar pouco e prioriza ser fácil de guardar/levar",
+          "linkAmazon": "https://www.amazon.com.br/dp/B09B37SZQM?tag=dicasinteli05-20"
+        },
+        {
+          "id": "BB-CADEIRAALIM-03",
+          "nome": "Cosco Kids, Cadeira de Refeição Portátil Pop, Cinza",
+          "imagem": "/images/produtos/cosco-kids-cadeira-refeicao-portatil-pop-cinza.png",
+          "selo": "Mais compacta",
+          "precoMin": 169,
+          "precoMax": 279,
+          "nota": 4.8,
+          "avaliacoes": 5600,
+          "pros": [
+            "Mesma marca confiável da Smart, com nota um pouco mais alta",
+            "Dobra bem fino pra guardar, boa opção pra cozinha pequena",
+            "Bom volume de avaliações (5,6 mil)"
+          ],
+          "contra": "Preço mais alto que a Smart da mesma marca, sem diferença estrutural grande — a escolha entre as duas é mais sobre design e leve variação de conforto.",
+          "paraQuem": "Pra quem já ia escolher a Smart mas quer a versão um pouco mais recente da mesma linha",
+          "linkAmazon": "https://www.amazon.com.br/dp/B09K2YM386?tag=dicasinteli05-20"
+        },
+        {
+          "id": "BB-CADEIRAALIM-04",
+          "nome": "Burigotto Cadeira De Refeição Prima Pappa Zero 3, Caramelo",
+          "imagem": "/images/produtos/burigotto-cadeira-refeicao-prima-pappa-zero3-caramelo.png",
+          "selo": "Mais completa",
+          "precoMin": 659,
+          "precoMax": 865,
+          "nota": 4.8,
+          "avaliacoes": 396,
+          "pros": [
+            "Reclina (serve desde bebê que ainda não senta sozinho, diferente da Poke)",
+            "Mesma marca de confiança (Burigotto) num modelo mais robusto",
+            "Acompanha a criança por mais tempo, com mais posições de uso"
+          ],
+          "contra": "É a mais cara da lista, quase 3x o preço da mais barata — só compensa se você quer usar desde os primeiros meses (com recline) até os 3 anos, sem trocar de cadeira.",
+          "paraQuem": "Pra quem quer investir uma vez só, desde antes do bebê sentar sozinho até os 3 anos",
+          "linkAmazon": "https://www.amazon.com.br/dp/B0CN25FF8W?tag=dicasinteli05-20"
+        },
+        {
+          "id": "BB-CADEIRAALIM-05",
+          "nome": "Maxi Baby Cadeira de Alimentação Portátil Honey, Cinza",
+          "imagem": "/images/produtos/maxibaby-cadeira-alimentacao-portatil-honey-cinza.png",
+          "selo": "Custo-benefício",
+          "precoMin": 399,
+          "precoMax": 399,
+          "nota": 4.8,
+          "avaliacoes": 1200,
+          "pros": [
+            "Nota alta com volume de avaliações consistente (1,2 mil)",
+            "Fica no meio do caminho entre os modelos simples e a Prima Pappa em preço",
+            "Boa opção pra quem quer fugir das duas marcas mais populares (Burigotto/Cosco)"
+          ],
+          "contra": "Marca com histórico de mercado menor que Burigotto e Cosco Kids — o volume de avaliações é bem menor que o das líderes da categoria.",
+          "paraQuem": "Pra quem quer uma opção intermediária de preço sem ser das duas marcas mais conhecidas",
+          "linkAmazon": "https://www.amazon.com.br/dp/B0CC792SMV?tag=dicasinteli05-20"
+        }
+      ]
     }
   ]
 }

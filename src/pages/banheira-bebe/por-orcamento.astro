@@ -1,0 +1,75 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import ProdutoCard from '../../components/ProdutoCard.astro';
+import dados from '../../data/produtos.json';
+
+const categoria = dados.categorias.find((c) => c.id === 'banheira-bebe');
+const produtos = [...categoria.produtos].sort((a, b) => a.precoMin - b.precoMin);
+
+const faixas = [
+  { titulo: "Até R$200", min: 0, max: 200 },
+  { titulo: "R$200 a R$450", min: 200, max: 450 },
+  { titulo: "Acima de R$450", min: 450, max: Infinity },
+];
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Início", item: "https://mundobebe.dicasinteligentes.com/" },
+    { "@type": "ListItem", position: 2, name: "Banheira para bebê", item: "https://mundobebe.dicasinteligentes.com/banheira-bebe/" },
+    { "@type": "ListItem", position: 3, name: "Por orçamento", item: "https://mundobebe.dicasinteligentes.com/banheira-bebe/por-orcamento/" },
+  ],
+};
+---
+<Layout
+  title="Banheira de bebê por orçamento"
+  description="As mesmas banheiras de bebê pesquisadas na Amazon, separadas por faixa de preço, do mais barato ao mais completo."
+>
+  <p><a href="/banheira-bebe/">← Banheira para bebê</a></p>
+  <h1>Banheira de bebê por orçamento</h1>
+  <p>Os mesmos produtos do guia principal, separados por faixa de preço.</p>
+
+  <section class="raciocinio">
+    <h2>O que muda de verdade entre as faixas</h2>
+    <p>
+      Até R$200 só a Pipdip entra, e ela abre mão de algo: é dobrável, de
+      silicone, com menos rigidez estrutural que uma banheira rígida.
+      Na faixa de R$200 a R$450 está a Millenia, disparada a mais avaliada
+      da categoria, mas com uma pegadinha real: o suporte aguenta só 20kg
+      no total (bebê mais água), então depois que o bebê passa dos 10kg o
+      conjunto já não é indicado, mesmo ele ainda cabendo na banheira.
+      Acima de R$450, a Smile tem suporte fixo que ocupa espaço permanente
+      no banheiro, e a Splash+ é a "mais completa" só no papel, porque tem
+      bem menos avaliações acumuladas que a Millenia pra confirmar isso.
+    </p>
+  </section>
+
+  {faixas.map((faixa) => {
+    const produtosFaixa = produtos.filter((p) => p.precoMin >= faixa.min && p.precoMin < faixa.max);
+    return produtosFaixa.length > 0 && (
+      <section class="faixa">
+        <h2>{faixa.titulo}</h2>
+        {produtosFaixa.map((produto) => <ProdutoCard produto={produto} />)}
+      </section>
+    );
+  })}
+
+  <p class="cta-final">
+    Quer ver o comparativo completo?
+    <a href="/banheira-bebe/">Volte pro guia completo →</a>
+  </p>
+
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+
+  <style>
+    .faixa { margin: 2rem 0; }
+    .faixa h2 { font-size: 1.1rem; margin: 0 0 1rem; color: var(--cor-acento); }
+    .cta-final {
+      margin-top: 2rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--cor-borda);
+      font-weight: 600;
+    }
+  </style>
+</Layout>

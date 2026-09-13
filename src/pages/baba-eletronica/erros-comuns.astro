@@ -1,0 +1,85 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Início", item: "https://mundobebe.dicasinteligentes.com/" },
+    { "@type": "ListItem", position: 2, name: "Babá eletrônica", item: "https://mundobebe.dicasinteligentes.com/baba-eletronica/" },
+    { "@type": "ListItem", position: 3, name: "Erros comuns", item: "https://mundobebe.dicasinteligentes.com/baba-eletronica/erros-comuns/" },
+  ],
+};
+
+const erros = [
+  {
+    titulo: "Confiar só no nome da marca, sem checar a nota real",
+    texto: "Marca conhecida não é garantia de nota alta — nesta pesquisa, o modelo de marca mais famosa teve a pior avaliação da categoria. Confira sempre a nota e o volume de avaliações antes de decidir.",
+  },
+  {
+    titulo: "Escolher modelo Wi-Fi sem trocar a senha padrão",
+    texto: "Câmera de monitoramento com Wi-Fi que fica com a senha de fábrica é um risco real de segurança — qualquer pessoa que descubra o padrão da marca pode tentar acessar. Troque a senha assim que configurar. Não é hipótese: a Polícia Federal já identificou mais de 140 câmeras e babás eletrônicas invadidas no Brasil.",
+  },
+  {
+    titulo: "Não checar o selo de homologação da Anatel na embalagem",
+    texto: "Todo equipamento com Wi-Fi/rádio vendido no Brasil precisa de homologação da Anatel — a própria Anatel já apreendeu milhares de produtos irregulares vendidos em marketplace, e o selo ausente é justamente o alerta que ela recomenda observar. Modelo genérico sem marca clara na caixa merece essa checagem extra antes de comprar.",
+  },
+  {
+    titulo: "Não testar o alcance antes de fixar tudo definitivamente",
+    texto: "300m de alcance declarado é em campo aberto. Em casa com paredes grossas ou mais de um andar, o sinal pode cair bem antes disso. Teste a posição da câmera e do receptor antes de fixar de vez.",
+  },
+  {
+    titulo: "Esquecer que modelo sem Wi-Fi não avisa fora de casa",
+    texto: "Se o plano é sair e ainda assim monitorar o bebê (com alguém cuidando), só o modelo Wi-Fi/celular resolve. Modelo com tela dedicada só funciona dentro do alcance da base.",
+  },
+  {
+    titulo: "Não conferir a autonomia de bateria antes de comprar",
+    texto: "Bateria fraca significa recarregar todo dia ou, pior, descarregar no meio da noite. Prefira modelos com autonomia declarada de várias horas ou dias, principalmente se o quarto do bebê fica longe da tomada.",
+  },
+];
+---
+<Layout
+  title="Erros comuns escolhendo babá eletrônica"
+  description="Os erros mais comuns na hora de escolher e usar babá eletrônica, e como evitar cada um."
+>
+  <p><a href="/baba-eletronica/">← Babá eletrônica</a></p>
+  <h1>Erros comuns escolhendo babá eletrônica</h1>
+  <p class="atualizado">Atualizado em setembro de 2026</p>
+
+  <p>
+    A maioria dos problemas com babá eletrônica não é sobre o produto ser
+    ruim, é sobre escolher o tipo errado (Wi-Fi x dedicado) ou não testar
+    antes de confiar de verdade nele. Os erros abaixo são os que mais
+    aparecem em avaliação e reclamação real de comprador.
+  </p>
+
+  <section class="erros">
+    {erros.map((erro, i) => (
+      <div class="erro-item">
+        <h2>{i + 1}. {erro.titulo}</h2>
+        <p>{erro.texto}</p>
+      </div>
+    ))}
+  </section>
+
+  <p class="cta-final">
+    Quer ver os produtos reais que pesquisamos?
+    <a href="/baba-eletronica/">Volte pro guia completo →</a>
+  </p>
+
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+
+  <style>
+    .atualizado { color: var(--cor-texto-suave); font-size: 0.9rem; }
+    .erros { margin: 2rem 0; }
+    .erro-item { margin-bottom: 1.75rem; }
+    .erro-item h2 { font-size: 1.1rem; margin: 0 0 0.4rem; }
+    .erro-item p { margin: 0; color: var(--cor-texto-suave); }
+    .cta-final {
+      margin-top: 2rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--cor-borda);
+      font-weight: 600;
+    }
+  </style>
+</Layout>

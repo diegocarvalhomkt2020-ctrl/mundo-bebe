@@ -1,0 +1,81 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Início", item: "https://mundobebe.dicasinteligentes.com/" },
+    { "@type": "ListItem", position: 2, name: "Berço/Moisés", item: "https://mundobebe.dicasinteligentes.com/berco-bebe/" },
+    { "@type": "ListItem", position: 3, name: "Erros comuns", item: "https://mundobebe.dicasinteligentes.com/berco-bebe/erros-comuns/" },
+  ],
+};
+
+const erros = [
+  {
+    titulo: "Não conferir a aprovação Inmetro antes de comprar",
+    texto: "Berço e moisés pra bebê têm norma técnica específica (ABNT NBR 15.860). Produto sem aprovação declarada na descrição pode ter espaçamento de grade errado ou colchonete que não encaixa direito — os dois são risco real de segurança, não só burocracia.",
+  },
+  {
+    titulo: "Comprar moisés portátil achando que dura o mesmo tempo que um berço fixo",
+    texto: "Moisés costuma ter limite de peso bem menor (9 a 15kg) que um berço fixo (15 a 20kg). Se o plano é usar por mais de alguns meses, confira o limite de peso antes de comprar — trocar de berço cedo demais é gasto que dá pra evitar.",
+  },
+  {
+    titulo: "Não medir o espaço do quarto antes de escolher berço fixo",
+    texto: "Berço de estrutura fixa costuma passar de 1 metro de largura e mais de 1,10m de altura. Meça o cômodo (e a porta, se for preciso passar montado) antes de comprar, principalmente em quarto compacto.",
+  },
+  {
+    titulo: "Confiar só no colchonete que acompanha o berço",
+    texto: "Em vários modelos, mesmo aprovados pelo Inmetro, o colchonete de fábrica é mais fino do que o ideal pra conforto. A aprovação garante segurança estrutural, não espessura — vale medir e considerar trocar por um mais grosso do tamanho certo.",
+  },
+  {
+    titulo: "Usar berço de co-sleeping sem encaixe perfeito na cama",
+    texto: "Berço acoplado à cama dos pais só é seguro se não sobrar espaço entre o berço e o colchão da cama — esse vão é o principal risco desse tipo de produto. Confira as medidas da sua cama antes de comprar esse modelo.",
+  },
+];
+---
+<Layout
+  title="Erros comuns escolhendo berço de bebê"
+  description="Os erros mais comuns na hora de escolher berço ou moisés para bebê, e como evitar cada um."
+>
+  <p><a href="/berco-bebe/">← Berço/Moisés</a></p>
+  <h1>Erros comuns escolhendo berço de bebê</h1>
+  <p class="atualizado">Atualizado em setembro de 2026</p>
+
+  <p>
+    A maioria dos problemas com berço não é sobre o produto ser ruim, é
+    sobre escolher o modelo errado pro espaço ou pro tempo de uso
+    planejado. Os erros abaixo são os que mais aparecem em avaliação e
+    reclamação real de comprador.
+  </p>
+
+  <section class="erros">
+    {erros.map((erro, i) => (
+      <div class="erro-item">
+        <h2>{i + 1}. {erro.titulo}</h2>
+        <p>{erro.texto}</p>
+      </div>
+    ))}
+  </section>
+
+  <p class="cta-final">
+    Quer ver os produtos reais que pesquisamos?
+    <a href="/berco-bebe/">Volte pro guia completo →</a>
+  </p>
+
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+
+  <style>
+    .atualizado { color: var(--cor-texto-suave); font-size: 0.9rem; }
+    .erros { margin: 2rem 0; }
+    .erro-item { margin-bottom: 1.75rem; }
+    .erro-item h2 { font-size: 1.1rem; margin: 0 0 0.4rem; }
+    .erro-item p { margin: 0; color: var(--cor-texto-suave); }
+    .cta-final {
+      margin-top: 2rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--cor-borda);
+      font-weight: 600;
+    }
+  </style>
+</Layout>

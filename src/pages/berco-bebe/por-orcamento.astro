@@ -1,0 +1,75 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import ProdutoCard from '../../components/ProdutoCard.astro';
+import dados from '../../data/produtos.json';
+
+const categoria = dados.categorias.find((c) => c.id === 'berco-bebe');
+const produtos = [...categoria.produtos].sort((a, b) => a.precoMin - b.precoMin);
+
+const faixas = [
+  { titulo: "Até R$400", min: 0, max: 400 },
+  { titulo: "R$400 a R$700", min: 400, max: 700 },
+  { titulo: "Acima de R$700", min: 700, max: Infinity },
+];
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Início", item: "https://mundobebe.dicasinteligentes.com/" },
+    { "@type": "ListItem", position: 2, name: "Berço/Moisés", item: "https://mundobebe.dicasinteligentes.com/berco-bebe/" },
+    { "@type": "ListItem", position: 3, name: "Por orçamento", item: "https://mundobebe.dicasinteligentes.com/berco-bebe/por-orcamento/" },
+  ],
+};
+---
+<Layout
+  title="Berço de bebê por orçamento"
+  description="Os mesmos berços e moisés pesquisados na Amazon, separados por faixa de preço, do mais barato ao mais completo."
+>
+  <p><a href="/berco-bebe/">← Berço/Moisés</a></p>
+  <h1>Berço de bebê por orçamento</h1>
+  <p>Os mesmos produtos do guia principal, separados por faixa de preço.</p>
+
+  <section class="raciocinio">
+    <h2>O que muda de verdade entre as faixas</h2>
+    <p>
+      Até R$400 as duas opções têm uma limitação clara: o moisés portátil
+      da MaxiBaby aguenta só até 9kg, então o bebê ultrapassa o limite
+      rápido, e o co-bed da KaBaby tem a nota mais baixa da lista e exige
+      encaixe perfeito na cama pra ser seguro. Na faixa de R$400 a R$700
+      já são berços de estrutura fixa, pensados pra durar mais tempo, mas
+      valem medir o espaço do quarto antes, principalmente o Serenata.
+      Acima de R$700 o Falcon custa quase o dobro do berço mais barato e
+      só compensa se o plano for realmente usar até os 20kg sem trocar
+      de berço no meio do caminho.
+    </p>
+  </section>
+
+  {faixas.map((faixa) => {
+    const produtosFaixa = produtos.filter((p) => p.precoMin >= faixa.min && p.precoMin < faixa.max);
+    return produtosFaixa.length > 0 && (
+      <section class="faixa">
+        <h2>{faixa.titulo}</h2>
+        {produtosFaixa.map((produto) => <ProdutoCard produto={produto} />)}
+      </section>
+    );
+  })}
+
+  <p class="cta-final">
+    Quer ver o comparativo completo?
+    <a href="/berco-bebe/">Volte pro guia completo →</a>
+  </p>
+
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+
+  <style>
+    .faixa { margin: 2rem 0; }
+    .faixa h2 { font-size: 1.1rem; margin: 0 0 1rem; color: var(--cor-acento); }
+    .cta-final {
+      margin-top: 2rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--cor-borda);
+      font-weight: 600;
+    }
+  </style>
+</Layout>

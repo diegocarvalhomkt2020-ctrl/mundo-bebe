@@ -1,0 +1,230 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import ProdutoCard from '../../components/ProdutoCard.astro';
+import dados from '../../data/produtos.json';
+
+const categoria = dados.categorias.find((c) => c.id === 'baba-eletronica');
+const produtos = categoria.produtos;
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Início", item: "https://mundobebe.dicasinteligentes.com/" },
+    { "@type": "ListItem", position: 2, name: "Babá eletrônica", item: "https://mundobebe.dicasinteligentes.com/baba-eletronica/" },
+  ],
+};
+
+const faq = [
+  {
+    pergunta: "Babá eletrônica com Wi-Fi ou sem Wi-Fi, qual é mais segura?",
+    resposta: "Depende do que você quer dizer com segurança. Sem Wi-Fi é mais privado (ninguém de fora consegue acessar a câmera pela internet), mas só funciona dentro de casa, perto da base. Com Wi-Fi você acompanha de qualquer lugar pelo celular, mas depende da sua rede e, em tese, tem mais superfície de ataque se a senha for fraca.",
+  },
+  {
+    pergunta: "Vale pagar mais caro numa marca conhecida?",
+    resposta: "Nem sempre — nesta pesquisa, o modelo de marca reconhecida teve a nota mais baixa da lista. Marca ajuda em suporte pós-venda, mas confira sempre a nota e as avaliações reais antes de decidir só pelo nome.",
+  },
+  {
+    pergunta: "Alcance de 300m é suficiente pra qualquer casa?",
+    resposta: "Pra apartamento ou casa térrea, sim, tranquilamente. Em casa de dois andares com muitas paredes de alvenaria grossa, o sinal pode cair — vale testar a posição antes de fixar tudo definitivamente.",
+  },
+];
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faq.map((item) => ({
+    "@type": "Question",
+    name: item.pergunta,
+    acceptedAnswer: { "@type": "Answer", text: item.resposta },
+  })),
+};
+---
+<Layout
+  title="Babá eletrônica: qual escolher"
+  description="Babás eletrônicas pesquisadas na Amazon, com preço, nota e o defeito real de cada uma, comparando modelo dedicado e modelo Wi-Fi, pra escolher sem chute."
+  image="/images/produtos/monitor-bebe-camera-tela-3-2-visao-noturna.png"
+>
+  <p><a href="/">← Início</a></p>
+  <h1>Babá eletrônica: qual escolher</h1>
+  <p class="atualizado">Todos os produtos abaixo foram pesquisados na Amazon, com preço, nota e avaliações reais.</p>
+
+  <p>
+    Babá eletrônica errada é sinal que cai, imagem que trava ou bateria
+    que não dura a noite toda. Nessa lista comparamos modelo dedicado
+    (tela própria, sem depender de internet) e modelo Wi-Fi (acompanha
+    pelo celular), cada um com o trade-off declarado.
+  </p>
+
+  <section class="como-escolhemos">
+    <h2>Como escolhemos</h2>
+    <p>
+      Além da nota e volume de avaliações, separamos os modelos por tipo
+      de conexão (Wi-Fi ou dedicado) porque isso muda o uso real, não só
+      o preço. Nenhum produto entra sem um defeito real declarado —
+      incluindo o de marca reconhecida, que teve a nota mais baixa da
+      pesquisa.
+    </p>
+  </section>
+
+  <section class="comparativo">
+    <h2>Comparativo rápido</h2>
+    <div class="tabela-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th scope="col">Produto</th>
+            <th scope="col">Preço</th>
+            <th scope="col">Selo</th>
+            <th scope="col"><span class="sr-only">Ação</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          {produtos.map((produto) => (
+            <tr>
+              <td data-label="Produto">{produto.nome}</td>
+              <td data-label="Preço">{produto.precoMin === produto.precoMax ? `R$ ${produto.precoMin}` : `R$ ${produto.precoMin} a R$ ${produto.precoMax}`}</td>
+              <td data-label="Selo">{produto.selo || "—"}</td>
+              <td data-label="">
+                <a class="botao-tabela" href={produto.linkAmazon} rel="sponsored nofollow">Ver preço</a>
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="honestidade">
+    <h2>Onde vale gastar mais, onde não faz diferença</h2>
+    <p>
+      Pagar mais caro aqui não é garantia de nota mais alta — o modelo
+      Motorola, mais caro e de marca conhecida, teve a pior nota da lista
+      (3,2). O mais avaliado de todos (mais de 16 mil avaliações) é um
+      produto sem marca famosa, na faixa intermediária de preço. Se você
+      quer acompanhar pelo celular fora de casa, só a opção Wi-Fi resolve
+      — as outras são só pra uso dentro do alcance da base.
+    </p>
+  </section>
+
+  <section id="baba-eletronica" class="categoria">
+    <h2>{categoria.nome}</h2>
+    <p>{categoria.descricao}</p>
+    {produtos.map((produto) => <ProdutoCard produto={produto} />)}
+  </section>
+
+  <p class="cluster-link">
+    Veja também:
+    <a href="/baba-eletronica/erros-comuns/">os erros mais comuns escolhendo babá eletrônica →</a>
+    ·
+    <a href="/baba-eletronica/por-orcamento/">as mesmas babás eletrônicas por orçamento →</a>
+    ·
+    <a href="/baba-eletronica/comparativo-top3/">comparativo Top 3 lado a lado →</a>
+    ·
+    <a href="/berco-bebe/">já viu nosso comparativo de berço e moisés? →</a>
+  </p>
+
+  <section class="faq">
+    <h2>Perguntas frequentes</h2>
+    {faq.map((item) => (
+      <div class="faq-item">
+        <h3>{item.pergunta}</h3>
+        <p>{item.resposta}</p>
+      </div>
+    ))}
+  </section>
+
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+
+  <style>
+    .sr-only {
+      position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+      overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0;
+    }
+    .atualizado { color: var(--cor-texto-suave); font-size: 0.9rem; }
+    .cluster-link { font-weight: 600; margin: 2.5rem 0 0; line-height: 2; }
+    .como-escolhemos {
+      background: var(--cor-superficie);
+      border: 1px solid var(--cor-borda);
+      border-radius: 10px;
+      padding: 1rem 1.25rem;
+      margin: 1.5rem 0;
+    }
+    .como-escolhemos h2 { font-size: 1rem; margin: 0 0 0.4rem; }
+    .como-escolhemos p { margin: 0; font-size: 0.9rem; color: var(--cor-texto-suave); }
+    .comparativo { margin: 1.5rem 0 2.5rem; }
+    .tabela-wrap { overflow-x: auto; }
+    table { width: 100%; border-collapse: collapse; table-layout: fixed; font-size: 0.85rem; }
+    th, td {
+      text-align: left;
+      padding: 0.6rem 0.5rem;
+      border-bottom: 1px solid var(--cor-borda);
+      white-space: normal;
+      overflow-wrap: break-word;
+    }
+    th { color: var(--cor-texto-suave); font-weight: 600; font-size: 0.75rem; text-transform: uppercase; }
+    th:nth-child(1), td:nth-child(1) { width: 40%; }
+    th:nth-child(2), td:nth-child(2) { width: 22%; }
+    th:nth-child(3), td:nth-child(3) { width: 20%; }
+    th:nth-child(4), td:nth-child(4) { width: 18%; }
+    .botao-tabela {
+      display: inline-block;
+      background: var(--cor-acento);
+      color: #fff;
+      text-decoration: none;
+      padding: 0.3rem 0.55rem;
+      border-radius: 999px;
+      font-size: 0.76rem;
+      white-space: nowrap;
+    }
+    .categoria { margin-bottom: 2.5rem; padding-top: 0.5rem; }
+    .honestidade {
+      margin: 2.5rem 0;
+      padding: 1.5rem 1.75rem;
+      background: var(--cor-superficie);
+      border: 1px solid var(--cor-borda);
+      border-left: 4px solid var(--cor-vale-saber);
+      border-radius: 10px;
+    }
+    .honestidade h2 { margin: 0 0 0.75rem; font-size: 1.15rem; }
+    .honestidade p { margin: 0; color: var(--cor-texto-suave); }
+    .faq {
+      margin-top: 2.5rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--cor-borda);
+    }
+    .faq-item { margin-bottom: 1.25rem; }
+    .faq-item h3 { font-size: 1rem; margin: 0 0 0.35rem; }
+    .faq-item p { margin: 0; color: var(--cor-texto-suave); }
+
+    @media (max-width: 640px) {
+      table, thead, tbody, th, td, tr { display: block; }
+      thead { position: absolute; left: -9999px; }
+      tr {
+        border: 1px solid var(--cor-borda);
+        border-radius: 10px;
+        padding: 0.75rem 0.9rem;
+        margin-bottom: 0.75rem;
+        background: var(--cor-superficie);
+      }
+      td {
+        border: none;
+        padding: 0.35rem 0;
+        white-space: normal;
+        width: auto !important;
+      }
+      td[data-label="Preço"] { white-space: nowrap; }
+      td[data-label]:not([data-label=""])::before {
+        content: attr(data-label);
+        display: block;
+        font-size: 0.7rem;
+        text-transform: uppercase;
+        letter-spacing: 0.03em;
+        color: var(--cor-texto-suave);
+        margin-bottom: 0.1rem;
+      }
+      td:last-child { padding-top: 0.6rem; }
+    }
+  </style>
+</Layout>
