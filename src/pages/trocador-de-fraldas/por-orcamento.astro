@@ -1,0 +1,71 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import ProdutoCard from '../../components/ProdutoCard.astro';
+import dados from '../../data/produtos.json';
+
+const categoria = dados.categorias.find((c) => c.id === 'trocador-de-fraldas');
+const produtos = [...categoria.produtos].sort((a, b) => a.precoMin - b.precoMin);
+
+const faixas = [
+  { titulo: "Até R$100", min: 0, max: 100 },
+  { titulo: "R$100 a R$250", min: 100, max: 250 },
+  { titulo: "Acima de R$250", min: 250, max: Infinity },
+];
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Início", item: "https://mundobebe.dicasinteligentes.com/" },
+    { "@type": "ListItem", position: 2, name: "Trocador de fraldas portátil", item: "https://mundobebe.dicasinteligentes.com/trocador-de-fraldas/" },
+    { "@type": "ListItem", position: 3, name: "Por orçamento", item: "https://mundobebe.dicasinteligentes.com/trocador-de-fraldas/por-orcamento/" },
+  ],
+};
+---
+<Layout
+  title="Trocador de fraldas portátil por orçamento"
+  description="Os mesmos trocadores de fraldas pesquisados na Amazon, separados por faixa de preço, do mais barato ao mais completo."
+>
+  <p><a href="/trocador-de-fraldas/">← Trocador de fraldas portátil</a></p>
+  <h1>Trocador de fraldas portátil por orçamento</h1>
+  <p>Os mesmos produtos do guia principal, separados por faixa de preço.</p>
+
+  <section class="raciocinio">
+    <h2>O que muda de verdade entre as faixas</h2>
+    <p>
+      Até R$100 está só o Buba, o mais simples da lista, sem os bolsos
+      extras dos outros três. Na faixa de R$100 a R$250 estão os
+      outros 3: o Alatino é o maior e o mais avaliado, o PILLANI tem
+      mais bolso pra guardar item extra, e o Kopi Baby serve também de
+      bolsa reversível. Nenhuma opção pesquisada passa de R$250.
+    </p>
+  </section>
+
+  {faixas.map((faixa) => {
+    const produtosFaixa = produtos.filter((p) => p.precoMin >= faixa.min && p.precoMin < faixa.max);
+    return produtosFaixa.length > 0 && (
+      <section class="faixa">
+        <h2>{faixa.titulo}</h2>
+        {produtosFaixa.map((produto) => <ProdutoCard produto={produto} />)}
+      </section>
+    );
+  })}
+
+  <p class="cta-final">
+    Quer ver o comparativo completo?
+    <a href="/trocador-de-fraldas/">Volte pro guia completo →</a>
+  </p>
+
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+
+  <style>
+    .faixa { margin: 2rem 0; }
+    .faixa h2 { font-size: 1.1rem; margin: 0 0 1rem; color: var(--cor-acento); }
+    .cta-final {
+      margin-top: 2rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--cor-borda);
+      font-weight: 600;
+    }
+  </style>
+</Layout>

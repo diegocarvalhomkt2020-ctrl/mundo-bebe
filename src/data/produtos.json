@@ -553,5 +553,86 @@
         }
       ]
     }
+  ,
+    {
+      "id": "trocador-de-fraldas",
+      "nome": "Trocador de fraldas portátil",
+      "tempoEstimado": "10 a 15 min",
+      "descricao": "Trocar fralda fora de casa sem um trocador é usar qualquer superfície disponível, nem sempre limpa ou segura. Um trocador portátil dobra pequeno, cabe na bolsa e resolve isso em casa, no carro ou em viagem.",
+      "produtos": [
+        {
+          "id": "BB-TROCADOR-01",
+          "nome": "Alatino Almofada Portátil para Troca de Fraldas, 63 x 56 cm",
+          "imagem": "/images/produtos/alatino-trocador-portatil-63x56cm.png",
+          "selo": "Mais avaliado",
+          "precoMin": 189,
+          "precoMax": 199,
+          "nota": 4.8,
+          "avaliacoes": 3460,
+          "pros": [
+            "De longe o mais avaliado da lista, quase 3,5 mil avaliações",
+            "Superfície grande (63,5 x 56 cm), com travesseiro embutido de espuma",
+            "Abertura com fivela de uma mão só, e bolso de acesso rápido a lenço umedecido"
+          ],
+          "contra": "Uma avaliação de 3 estrelas relata que a caixa chegou com peça faltando.",
+          "paraQuem": "Pra quem quer o modelo mais testado e com mais espaço",
+          "linkAmazon": "https://www.amazon.com.br/dp/B08N4W4CFC?tag=dicasinteli05-20"
+        },
+        {
+          "id": "BB-TROCADOR-02",
+          "nome": "Buba Trocador de Fraldas Portátil",
+          "imagem": "/images/produtos/buba-trocador-portatil.png",
+          "selo": "Mais barato",
+          "precoMin": 45,
+          "precoMax": 62,
+          "nota": 4.8,
+          "avaliacoes": 219,
+          "pros": [
+            "De longe o mais barato da lista, menos de um terço do preço do Alatino",
+            "Impermeável, com bolso pra fralda e lenço umedecido",
+            "Compacto, bom pra passeio rápido"
+          ],
+          "contra": "Uma avaliação relata que as costuras deixam passar um pouco de xixi na hora da troca, e que vazamento de cocô exige lavar o trocador inteiro, não só os lenços.",
+          "paraQuem": "Pra quem quer só o básico, gastando pouco",
+          "linkAmazon": "https://www.amazon.com.br/dp/B08QZPJZ73?tag=dicasinteli05-20"
+        },
+        {
+          "id": "BB-TROCADOR-03",
+          "nome": "PILLANI Trocador Portátil com Bolsos",
+          "imagem": "/images/produtos/pillani-trocador-portatil-bolsos.png",
+          "selo": "Mais completo",
+          "precoMin": 172,
+          "precoMax": 263,
+          "nota": 4.8,
+          "avaliacoes": 604,
+          "pros": [
+            "2 bolsos internos de tela, bolsa frontal com porta-chaves e porta-lenços de fácil acesso",
+            "Alças pra fixar no carrinho, no encosto do carro ou na bolsa",
+            "Forro interno impermeável em PEVA"
+          ],
+          "contra": "Uma avaliação relata barulho quando o bebê deita em cima, e que o enchimento perdeu a forma depois de cerca de 1 ano de uso.",
+          "paraQuem": "Pra quem quer guardar mais itens junto com o trocador",
+          "linkAmazon": "https://www.amazon.com.br/dp/B0CM9ZDFT7?tag=dicasinteli05-20"
+        },
+        {
+          "id": "BB-TROCADOR-04",
+          "nome": "Kopi Baby Trocador Portátil Reversível",
+          "imagem": "/images/produtos/kopi-baby-trocador-reversivel.png",
+          "selo": "Reversível",
+          "precoMin": 198,
+          "precoMax": 263,
+          "nota": 4.8,
+          "avaliacoes": 288,
+          "pros": [
+            "Porta-lenços umedecidos reversível, dá pra usar dos dois lados",
+            "2 bolsos grandes, funciona também como bolsa",
+            "Design dobrável pensado pra viagem"
+          ],
+          "contra": "Avaliações relatam pouco acolchoamento e volume grande pra guardar, apesar de fácil de usar em viagem.",
+          "paraQuem": "Pra quem quer um trocador que também sirva de bolsa extra",
+          "linkAmazon": "https://www.amazon.com.br/dp/B0BZQJ41ZS?tag=dicasinteli05-20"
+        }
+      ]
+    }
   ]
 }

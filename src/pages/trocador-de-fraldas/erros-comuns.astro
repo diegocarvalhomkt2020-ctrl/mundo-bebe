@@ -1,0 +1,81 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Início", item: "https://mundobebe.dicasinteligentes.com/" },
+    { "@type": "ListItem", position: 2, name: "Trocador de fraldas portátil", item: "https://mundobebe.dicasinteligentes.com/trocador-de-fraldas/" },
+    { "@type": "ListItem", position: 3, name: "Erros comuns", item: "https://mundobebe.dicasinteligentes.com/trocador-de-fraldas/erros-comuns/" },
+  ],
+};
+
+const erros = [
+  {
+    titulo: "Deixar o bebê sozinho numa superfície elevada",
+    texto: "Nenhum dos trocadores pesquisados tem cinto ou alça de segurança, porque foram feitos pra usar no chão, na cama ou numa superfície baixa. Se você usar em cima de uma cômoda ou mesa, nunca tire a mão de cima do bebê, mesmo por um segundo: bebê pode rolar e cair mais rápido do que parece.",
+  },
+  {
+    titulo: "Comprar pelo preço sem pensar no uso real",
+    texto: "Um modelo básico e barato resolve bem uma saída rápida, mas fica pequeno pra quem viaja com mais frequência e precisa levar fralda, lenço e troca de roupa junto. Pense no uso antes de decidir só pelo preço.",
+  },
+  {
+    titulo: "Não lavar direito depois de vazamento",
+    texto: "Xixi ou cocô que escapa pra dentro do enchimento, e não só pro lenço, pode passar cheiro pro trocador inteiro se não for lavado por completo. Siga a instrução de lavagem do fabricante, não só passe um pano por cima.",
+  },
+  {
+    titulo: "Guardar molhado ou úmido depois de usar",
+    texto: "Trocador dobrado e guardado ainda úmido, dentro da bolsa fechada, favorece mofo e cheiro. Deixe secar por completo antes de dobrar e guardar de volta.",
+  },
+  {
+    titulo: "Não conferir o tamanho antes de comprar",
+    texto: "Um trocador pequeno demais fica apertado pra bebê já maior, e um grande demais não cabe em qualquer bolsa. Confira as medidas do produto contra o tamanho da sua bolsa e a fase do bebê.",
+  },
+];
+---
+<Layout
+  title="Erros comuns escolhendo trocador de fraldas portátil"
+  description="Os erros mais comuns na hora de escolher e usar trocador de fraldas portátil, e como evitar cada um, com base em avaliações e reclamações reais."
+>
+  <p><a href="/trocador-de-fraldas/">← Trocador de fraldas portátil</a></p>
+  <h1>Erros comuns escolhendo trocador de fraldas portátil</h1>
+  <p class="atualizado">Atualizado em setembro de 2026</p>
+
+  <p>
+    A maioria dos problemas com trocador de fraldas portátil não é
+    sobre o produto ser ruim, é sobre o jeito de usar ou de cuidar dele
+    no dia a dia. Os erros abaixo são os que mais aparecem em avaliação
+    e reclamação real de comprador.
+  </p>
+
+  <section class="erros">
+    {erros.map((erro, i) => (
+      <div class="erro-item">
+        <h2>{i + 1}. {erro.titulo}</h2>
+        <p>{erro.texto}</p>
+      </div>
+    ))}
+  </section>
+
+  <p class="cta-final">
+    Quer ver os produtos reais que pesquisamos?
+    <a href="/trocador-de-fraldas/">Volte pro guia completo →</a>
+  </p>
+
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+
+  <style>
+    .atualizado { color: var(--cor-texto-suave); font-size: 0.9rem; }
+    .erros { margin: 2rem 0; }
+    .erro-item { margin-bottom: 1.75rem; }
+    .erro-item h2 { font-size: 1.1rem; margin: 0 0 0.4rem; }
+    .erro-item p { margin: 0; color: var(--cor-texto-suave); }
+    .cta-final {
+      margin-top: 2rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--cor-borda);
+      font-weight: 600;
+    }
+  </style>
+</Layout>
