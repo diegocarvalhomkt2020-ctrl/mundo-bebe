@@ -1,0 +1,233 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import ProdutoCard from '../../components/ProdutoCard.astro';
+import dados from '../../data/produtos.json';
+
+const categoria = dados.categorias.find((c) => c.id === 'trocador-de-fraldas');
+const produtos = categoria.produtos;
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Início", item: "https://mundobebe.dicasinteligentes.com/" },
+    { "@type": "ListItem", position: 2, name: "Trocador de fraldas portátil", item: "https://mundobebe.dicasinteligentes.com/trocador-de-fraldas/" },
+  ],
+};
+
+const faq = [
+  {
+    pergunta: "Trocador portátil precisa de alça de segurança pro bebê?",
+    resposta: "Nenhum dos 4 pesquisados vem com cinto ou alça pra prender o bebê, porque são feitos pra usar no chão, na cama ou numa superfície baixa, não numa mesa alta. Se for usar numa superfície elevada, nunca tire a mão de cima do bebê, mesmo por um segundo.",
+  },
+  {
+    pergunta: "Trocador portátil substitui o trocador fixo de casa?",
+    resposta: "Não precisa. Ele é pensado pra passeio, viagem e carro, onde não tem uma superfície própria pra trocar. Em casa, o berço ou a cômoda com trocador embutido costuma ser mais prático no dia a dia.",
+  },
+  {
+    pergunta: "Vale a pena o modelo com mais bolso?",
+    resposta: "Só se você realmente for carregar fralda, lenço e troca de roupa junto. Se o uso é rápido, perto de casa, um modelo mais simples como o Buba já resolve sem pagar por espaço que não vai usar.",
+  },
+];
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faq.map((item) => ({
+    "@type": "Question",
+    name: item.pergunta,
+    acceptedAnswer: { "@type": "Answer", text: item.resposta },
+  })),
+};
+---
+<Layout
+  title="Trocador de fraldas portátil: qual escolher"
+  description="Trocadores de fraldas portáteis pesquisados na Amazon, com preço, nota e o defeito real de cada um, pra escolher sem chute."
+  image="/images/produtos/alatino-trocador-portatil-63x56cm.png"
+>
+  <p><a href="/">← Início</a></p>
+  <h1>Trocador de fraldas portátil: qual escolher</h1>
+  <p class="atualizado">Todos os produtos abaixo foram pesquisados na Amazon, com preço, nota e avaliações reais.</p>
+
+  <p>
+    Trocar fralda fora de casa sem um trocador é usar qualquer
+    superfície disponível, nem sempre limpa. Nessa lista comparamos
+    tamanho, quantidade de bolso e preço, cada um com o defeito real
+    declarado.
+  </p>
+
+  <section class="como-escolhemos">
+    <h2>Como escolhemos</h2>
+    <p>
+      Além da nota e volume de avaliações, separamos os modelos por
+      quantidade de bolso e por tamanho, porque isso muda o uso real, não
+      só o preço. Nenhum produto entra sem um defeito real declarado,
+      tirado da ficha técnica ou de avaliação de comprador.
+    </p>
+  </section>
+
+  <section class="comparativo">
+    <h2>Comparativo rápido</h2>
+    <div class="tabela-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th scope="col">Produto</th>
+            <th scope="col">Preço</th>
+            <th scope="col">Selo</th>
+            <th scope="col"><span class="sr-only">Ação</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          {produtos.map((produto) => (
+            <tr>
+              <td data-label="Produto">{produto.nome}</td>
+              <td data-label="Preço">{produto.precoMin === produto.precoMax ? `R$ ${produto.precoMin}` : `R$ ${produto.precoMin} a R$ ${produto.precoMax}`}</td>
+              <td data-label="Selo">{produto.selo || "—"}</td>
+              <td data-label="">
+                <a class="botao-tabela" href={produto.linkAmazon} rel="sponsored nofollow">Ver preço</a>
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="honestidade">
+    <h2>Onde vale gastar mais, onde não faz diferença</h2>
+    <p>
+      O Buba (~R$45-62) é bem mais barato que os outros três, mas é
+      também o mais simples: só o básico de bolso e impermeabilidade.
+      Entre os três da faixa de R$170 a R$200, a escolha não é sobre
+      qualidade, é sobre o que cada um resolve: o Alatino é o maior e o
+      mais testado (quase 3,5 mil avaliações), o PILLANI tem mais
+      bolso pra guardar item extra, e o Kopi Baby serve também de bolsa
+      reversível. Nenhum se destaca disparado a ponto de justificar
+      pagar mais sem um motivo específico.
+    </p>
+  </section>
+
+  <section id="trocador-de-fraldas" class="categoria">
+    <h2>{categoria.nome}</h2>
+    <p>{categoria.descricao}</p>
+    {produtos.map((produto) => <ProdutoCard produto={produto} />)}
+  </section>
+
+  <p class="cluster-link">
+    Veja também:
+    <a href="/trocador-de-fraldas/erros-comuns/">os erros mais comuns escolhendo trocador de fraldas →</a>
+    ·
+    <a href="/trocador-de-fraldas/por-orcamento/">os mesmos trocadores por orçamento →</a>
+    ·
+    <a href="/trocador-de-fraldas/comparativo-top3/">comparativo Top 3 lado a lado →</a>
+    ·
+    <a href="/berco-bebe/">já viu nosso comparativo de berço e moisés? →</a>
+    ·
+    <a href="/banheira-bebe/">banheira de bebê: qual escolher →</a>
+  </p>
+
+  <section class="faq">
+    <h2>Perguntas frequentes</h2>
+    {faq.map((item) => (
+      <div class="faq-item">
+        <h3>{item.pergunta}</h3>
+        <p>{item.resposta}</p>
+      </div>
+    ))}
+  </section>
+
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+
+  <style>
+    .sr-only {
+      position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+      overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0;
+    }
+    .atualizado { color: var(--cor-texto-suave); font-size: 0.9rem; }
+    .cluster-link { font-weight: 600; margin: 2.5rem 0 0; line-height: 2; }
+    .como-escolhemos {
+      background: var(--cor-superficie);
+      border: 1px solid var(--cor-borda);
+      border-radius: 10px;
+      padding: 1rem 1.25rem;
+      margin: 1.5rem 0;
+    }
+    .como-escolhemos h2 { font-size: 1rem; margin: 0 0 0.4rem; }
+    .como-escolhemos p { margin: 0; font-size: 0.9rem; color: var(--cor-texto-suave); }
+    .comparativo { margin: 1.5rem 0 2.5rem; }
+    .tabela-wrap { overflow-x: auto; }
+    table { width: 100%; border-collapse: collapse; table-layout: fixed; font-size: 0.85rem; }
+    th, td {
+      text-align: left;
+      padding: 0.6rem 0.5rem;
+      border-bottom: 1px solid var(--cor-borda);
+      white-space: normal;
+      overflow-wrap: break-word;
+    }
+    th { color: var(--cor-texto-suave); font-weight: 600; font-size: 0.75rem; text-transform: uppercase; }
+    th:nth-child(1), td:nth-child(1) { width: 40%; }
+    th:nth-child(2), td:nth-child(2) { width: 22%; }
+    th:nth-child(3), td:nth-child(3) { width: 20%; }
+    th:nth-child(4), td:nth-child(4) { width: 18%; }
+    .botao-tabela {
+      display: inline-block;
+      background: var(--cor-acento);
+      color: #fff;
+      text-decoration: none;
+      padding: 0.3rem 0.55rem;
+      border-radius: 999px;
+      font-size: 0.76rem;
+      white-space: nowrap;
+    }
+    .categoria { margin-bottom: 2.5rem; padding-top: 0.5rem; }
+    .honestidade {
+      margin: 2.5rem 0;
+      padding: 1.5rem 1.75rem;
+      background: var(--cor-superficie);
+      border: 1px solid var(--cor-borda);
+      border-left: 4px solid var(--cor-vale-saber);
+      border-radius: 10px;
+    }
+    .honestidade h2 { margin: 0 0 0.75rem; font-size: 1.15rem; }
+    .honestidade p { margin: 0; color: var(--cor-texto-suave); }
+    .faq {
+      margin-top: 2.5rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--cor-borda);
+    }
+    .faq-item { margin-bottom: 1.25rem; }
+    .faq-item h3 { font-size: 1rem; margin: 0 0 0.35rem; }
+    .faq-item p { margin: 0; color: var(--cor-texto-suave); }
+
+    @media (max-width: 640px) {
+      table, thead, tbody, th, td, tr { display: block; }
+      thead { position: absolute; left: -9999px; }
+      tr {
+        border: 1px solid var(--cor-borda);
+        border-radius: 10px;
+        padding: 0.75rem 0.9rem;
+        margin-bottom: 0.75rem;
+        background: var(--cor-superficie);
+      }
+      td {
+        border: none;
+        padding: 0.35rem 0;
+        white-space: normal;
+        width: auto !important;
+      }
+      td[data-label="Preço"] { white-space: nowrap; }
+      td[data-label]:not([data-label=""])::before {
+        content: attr(data-label);
+        display: block;
+        font-size: 0.7rem;
+        text-transform: uppercase;
+        letter-spacing: 0.03em;
+        color: var(--cor-texto-suave);
+        margin-bottom: 0.1rem;
+      }
+      td:last-child { padding-top: 0.6rem; }
+    }
+  </style>
+</Layout>
